@@ -1,18 +1,31 @@
-import { Heading, Container } from '@chakra-ui/react';
+import { Heading, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
+import bg from '../../../public/AdobeStock_381853198.jpeg';
 
 const style = {
   height: '100vh',
-  background: 'red',
-  // backgroundImage: `url("../../../public/Desktop/Welcome.jpg") !important`,
+  width: '100vw',
+  backgroundImage: `url(${bg.src})`,
   backgroundPosition: 'center',
-}
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+};
+
+const headingStyle = {
+  fontFamily: `'MinervaModern', sans-serif`,
+  fontStyle: 'normal',
+  fontWeight: 400,
+  fontSize: '40px',
+  color: '#00263E',
+};
+
 export default function TopPanel() {
   return (
   <>
     <div style={style}>
-      <Image src="/Desktop/Welcome.jpg" alt="welcome" width="500" height="500" />
-      <Heading as="h2" size="4xl">Investing in and building business relationships with people who share our values.</Heading>
+      {/* <Flex w="40%"> */}
+        <h2>Investing in and building business relationships with people who share our values.</h2>
+      {/* </Flex> */}
     </div>
   </>)
 }

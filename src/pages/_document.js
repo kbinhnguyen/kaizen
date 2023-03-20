@@ -5,7 +5,12 @@ import { ColorModeScript } from '@chakra-ui/react';
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        {/* <link
+          rel="stylesheet"
+          href="https://use.typekit.net/aja2ccd.css"
+        /> */}
+      </Head>
       <body>
         {/* <ColorModeScript initialColorMode={theme.config.initialColorMode} /> */}
         <Main />
