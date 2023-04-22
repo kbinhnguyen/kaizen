@@ -9,7 +9,7 @@ export default function NavBar() {
     >
 
       <Link href="/about">ABOUT</Link>
-      <Link href="/investment">INVESTMENT</Link>
+      <Link href="/investments">INVESTMENTS</Link>
       <Link href="/consulting">CONSULTING</Link>
       <Link href="/investor">INVESTOR</Link>
       <Link href="/contact">CONTACT</Link>
