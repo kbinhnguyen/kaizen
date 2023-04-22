@@ -48,6 +48,9 @@ const linkTheme = defineStyleConfig({
     topNavBar: {
       fontFamily: `'Roboto', sans-serif`,
       color: '#00263E',
+    },
+    bottomNavBar: {
+      color: '#C2D5ED',
     }
   }
 });

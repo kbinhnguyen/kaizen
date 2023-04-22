@@ -1,7 +1,7 @@
 import { Heading, Flex, Image, Box, Spacer } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import Logo from '../../../public/Group.png';
-import NavBar from './NavBar';
+import NavBar from './HeaderNavBar';
 
 export default function Header() {
   return (

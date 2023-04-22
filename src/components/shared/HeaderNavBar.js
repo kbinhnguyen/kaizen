@@ -1,7 +1,7 @@
-import { Stack, Box, Link, Center } from '@chakra-ui/react';
+import { Stack, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
-export default function NavBar() {
+export default function HeaderNavBar() {
   return (
     <Stack
       direction="row"
