@@ -8,12 +8,11 @@ export default function NavBar() {
       spacing={12}
       align="center"
     >
-
-      <Link as={NextLink} href="/about">ABOUT</Link>
-      <Link as={NextLink} href="/investments">INVESTMENTS</Link>
-      <Link as={NextLink} href="/consulting">CONSULTING</Link>
-      <Link as={NextLink} href="/investor">INVESTOR</Link>
-      <Link as={NextLink} href="/contact">CONTACT</Link>
+      <Link variant="topNavBar" as={NextLink} href="/about">ABOUT</Link>
+      <Link variant="topNavBar" as={NextLink} href="/investments">INVESTMENTS</Link>
+      <Link variant="topNavBar" as={NextLink} href="/consulting">CONSULTING</Link>
+      <Link variant="topNavBar" as={NextLink} href="/investor">INVESTOR</Link>
+      <Link variant="topNavBar" as={NextLink} href="/contact">CONTACT</Link>
     </Stack>
   );
 }

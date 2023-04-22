@@ -1,4 +1,4 @@
-import { extendTheme, defineStyleConfig } from '@chakra-ui/react';
+import { extendTheme, defineStyle, defineStyleConfig } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
 const colors = {
@@ -28,8 +28,29 @@ const headingTheme = defineStyleConfig({
 
 const linkTheme = defineStyleConfig({
   baseStyle: {
-    //  fontFamily: `'Roboto', sans-serif`,
     fontWeight: 400,
+    _hover: { opacity: 0.3 },
+  },
+  variants: {
+    learnMore: {
+      fontFamily: `'Lato', sans-serif`,
+      color: '#062A30',
+      textDecoration: 'underline',
+    },
+    topNavBar: {
+      fontFamily: `'Roboto', sans-serif`,
+      color: '#00263E',
+    }
+  }
+});
+
+const iconTheme = defineStyleConfig({
+  baseStyle: {
+    boxSize: 4,
+    _hover: {
+      opacity: 0.3,
+      cursor: 'pointer',
+    },
   }
 });
 
@@ -38,6 +59,7 @@ export const theme = extendTheme({
   components: {
     Heading: headingTheme,
     Link: linkTheme,
+    Icon: iconTheme,
   },
   fonts: {
     heading: `'minerva-modern', sans-serif`,

@@ -1,5 +1,6 @@
-import { Heading, VStack, HStack, Grid, GridItem, Box, Text, Icon, } from '@chakra-ui/react';
+import { Heading, VStack, HStack, Grid, GridItem, Box, Text, Icon, IconButton, Button, Link } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import NextLink from 'next/link';
 import FirstImg from '../../../public/AdobeStock_52149427.jpeg';
 import SecondImg from '../../../public/AdobeStock_7179061.jpeg';
 
@@ -48,18 +49,19 @@ export default function MidPanel() {
               alt="pebbles"
             />
           </GridItem>
-          <GridItem pl={20}>
-            <HStack pt={56} spacing={12}>
+          <GridItem pl={16}>
+            <HStack pt={56} spacing={20}>
               <VStack spacing={1}>
-                <CircleIcon boxSize={4} color="#33647E" />
-                <CircleIcon boxSize={4} color="#DCE3EB" />
-                <CircleIcon boxSize={4} color="#DCE3EB" />
+                <CircleIcon color="#33647E" />
+                <CircleIcon color="#DCE3EB" />
+                <CircleIcon color="#DCE3EB" />
               </VStack>
               <VStack spacing={4}>
                 <Heading variant="pageName" as="h3" w="100%">Investments</Heading>
                 <Text>
                   Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
                 </Text>
+                <Link variant="learnMore" w="100%" as={NextLink} href="/investments">Learn More</Link>
               </VStack>
             </HStack>
           </GridItem>
