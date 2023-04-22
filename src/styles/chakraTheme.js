@@ -41,6 +41,9 @@ const linkTheme = defineStyleConfig({
       fontFamily: `'Lato', sans-serif`,
       color: '#062A30',
       borderBottom: '1px solid #062A30',
+      _hover: {
+        textDecoration: 'none',
+      }
     },
     topNavBar: {
       fontFamily: `'Roboto', sans-serif`,

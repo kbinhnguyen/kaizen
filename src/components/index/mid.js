@@ -1,5 +1,5 @@
 import {
-  Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link
+  Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
@@ -63,7 +63,9 @@ export default function MidPanel() {
                 <Text>
                   Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
                 </Text>
-                <Link variant="learnMore" w="100%" as={NextLink} href="/investments">Learn More</Link>
+                <Box w="100%">
+                  <Link variant="learnMore" w="max-content" as={NextLink} href="/investments">Learn More</Link>
+                </Box>
               </VStack>
             </HStack>
           </GridItem>
