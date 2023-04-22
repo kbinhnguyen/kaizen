@@ -16,12 +16,10 @@ export default function TopPanel() {
   return (
   <>
     <div style={style}>
-      {/* <Flex w="40%"> */}
-        <Header />
-        <Box position="absolute" w="40%" top="30%" left="10%">
-          <Heading as="h2" color="#00263E" fontSize="40px">Investing in and building business relationships with people who share our values.</Heading>
-        </Box>
-      {/* </Flex> */}
+      <Header />
+      <Box position="absolute" w="45%" top="30%" left="10%">
+        <Heading as="h2" variant="tagline">Investing in and building business relationships with people who share our values.</Heading>
+      </Box>
     </div>
   </>)
 }

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import TopPanel from '../components/index/top';
 import MidPanel from '../components/index/mid';
+import BottomPanel from '../components/index/bottom'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <TopPanel />
         <MidPanel />
+        <BottomPanel />
       </main>
     </>
   )

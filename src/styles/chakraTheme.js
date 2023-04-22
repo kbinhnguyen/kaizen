@@ -17,11 +17,15 @@ const headingTheme = defineStyleConfig({
       fontFamily: `'proxima-nova', sans-serif`,
       color: '#33647E',
       fontWeight: 700,
-      fontSize: '16px',
+      fontSize: '20px',
     },
     pageName: {
       color: '#33647E',
       fontSize: '40px',
+    },
+    tagline: {
+      fontSize: '40px',
+      color: '#00263E',
     }
   }
 });
@@ -29,13 +33,14 @@ const headingTheme = defineStyleConfig({
 const linkTheme = defineStyleConfig({
   baseStyle: {
     fontWeight: 400,
+    fontSize: '20px',
     _hover: { opacity: 0.3 },
   },
   variants: {
     learnMore: {
       fontFamily: `'Lato', sans-serif`,
       color: '#062A30',
-      textDecoration: 'underline',
+      borderBottom: '1px solid #062A30',
     },
     topNavBar: {
       fontFamily: `'Roboto', sans-serif`,
@@ -54,12 +59,19 @@ const iconTheme = defineStyleConfig({
   }
 });
 
+const textTheme = defineStyleConfig({
+  baseStyle: {
+    fontSize: '20px',
+  }
+});
+
 export const theme = extendTheme({
   colors,
   components: {
     Heading: headingTheme,
     Link: linkTheme,
     Icon: iconTheme,
+    Text: textTheme,
   },
   fonts: {
     heading: `'minerva-modern', sans-serif`,

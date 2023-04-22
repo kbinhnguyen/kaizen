@@ -1,4 +1,6 @@
-import { Heading, VStack, HStack, Grid, GridItem, Box, Text, Icon, IconButton, Button, Link } from '@chakra-ui/react';
+import {
+  Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link
+} from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import FirstImg from '../../../public/AdobeStock_52149427.jpeg';
@@ -21,7 +23,7 @@ export default function MidPanel() {
       <GridItem h="100%" pt={12} pb={6}>
         <Grid h="100%" templateColumns="repeat(2, 1fr)">
           <GridItem w="80%">
-            <VStack spacing={6} pt={56}>
+            <VStack spacing={6} pt={28}>
               <Heading variant="accented" as="h3" w="100%">OUR APPROACH</Heading>
               <Heading fontSize="48px" as="h2" w="100%">Plan for tomorrow. Today.</Heading>
               <Text>
@@ -49,8 +51,8 @@ export default function MidPanel() {
               alt="pebbles"
             />
           </GridItem>
-          <GridItem pl={16}>
-            <HStack pt={56} spacing={20}>
+          <GridItem pl={12}>
+            <HStack pt={28} spacing={12}>
               <VStack spacing={1}>
                 <CircleIcon color="#33647E" />
                 <CircleIcon color="#DCE3EB" />
