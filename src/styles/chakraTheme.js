@@ -18,6 +18,10 @@ const headingTheme = defineStyleConfig({
       color: '#33647E',
       fontWeight: 700,
       fontSize: '16px',
+    },
+    pageName: {
+      color: '#33647E',
+      fontSize: '40px',
     }
   }
 });

@@ -1,4 +1,5 @@
 import { Stack, Box, Link, Center } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export default function NavBar() {
   return (
@@ -8,11 +9,11 @@ export default function NavBar() {
       align="center"
     >
 
-      <Link href="/about">ABOUT</Link>
-      <Link href="/investments">INVESTMENTS</Link>
-      <Link href="/consulting">CONSULTING</Link>
-      <Link href="/investor">INVESTOR</Link>
-      <Link href="/contact">CONTACT</Link>
+      <Link as={NextLink} href="/about">ABOUT</Link>
+      <Link as={NextLink} href="/investments">INVESTMENTS</Link>
+      <Link as={NextLink} href="/consulting">CONSULTING</Link>
+      <Link as={NextLink} href="/investor">INVESTOR</Link>
+      <Link as={NextLink} href="/contact">CONTACT</Link>
     </Stack>
   );
 }

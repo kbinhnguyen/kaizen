@@ -19,7 +19,7 @@ export default function TopPanel() {
       {/* <Flex w="40%"> */}
         <Header />
         <Box position="absolute" w="40%" top="30%" left="10%">
-          <Heading as="h2" color="#00263E">Investing in and building business relationships with people who share our values.</Heading>
+          <Heading as="h2" color="#00263E" fontSize="40px">Investing in and building business relationships with people who share our values.</Heading>
         </Box>
       {/* </Flex> */}
     </div>

@@ -1,7 +1,17 @@
-import { Heading, VStack, Grid, GridItem, Box, Text, } from '@chakra-ui/react';
+import { Heading, VStack, HStack, Grid, GridItem, Box, Text, Icon, } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import FirstImg from '../../../public/AdobeStock_52149427.jpeg';
+import SecondImg from '../../../public/AdobeStock_7179061.jpeg';
 
+
+const CircleIcon = (props) => (
+  <Icon viewBox='0 0 200 200' {...props}>
+    <path
+      fill='currentColor'
+      d='M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0'
+    />
+  </Icon>
+);
 
 export default function MidPanel() {
   return (
@@ -10,7 +20,7 @@ export default function MidPanel() {
       <GridItem h="100%" pt={12} pb={6}>
         <Grid h="100%" templateColumns="repeat(2, 1fr)">
           <GridItem w="80%">
-            <VStack spacing={6} pt={48}>
+            <VStack spacing={6} pt={56}>
               <Heading variant="accented" as="h3" w="100%">OUR APPROACH</Heading>
               <Heading fontSize="48px" as="h2" w="100%">Plan for tomorrow. Today.</Heading>
               <Text>
@@ -19,21 +29,42 @@ export default function MidPanel() {
             </VStack>
           </GridItem>
           <GridItem h="100%" position="relative">
-            {/* <Box w="100%" h="100%"> */}
-              <NextImage
-                // width="100%"
-                // height="100%"
-                objectFit="cover"
-                // position="absolute"
-                layout="fill"
-                src={FirstImg}
-                alt="high-rise-buildings"
-              />
-            {/* </Box> */}
+            <NextImage
+              objectFit="cover"
+              layout="fill"
+              src={FirstImg}
+              alt="high-rise-buildings"
+            />
           </GridItem>
         </Grid>
       </GridItem>
-      <GridItem h="100%" pb={12} pt={6}>2nd item</GridItem>
+      <GridItem h="100%" pb={12} pt={6}>
+        <Grid h="100%" templateColumns="repeat(2, 1fr)">
+          <GridItem h="100%" position="relative">
+            <NextImage
+              objectFit="cover"
+              layout="fill"
+              src={SecondImg}
+              alt="pebbles"
+            />
+          </GridItem>
+          <GridItem pl={20}>
+            <HStack pt={56} spacing={12}>
+              <VStack spacing={1}>
+                <CircleIcon boxSize={4} color="#33647E" />
+                <CircleIcon boxSize={4} color="#DCE3EB" />
+                <CircleIcon boxSize={4} color="#DCE3EB" />
+              </VStack>
+              <VStack spacing={4}>
+                <Heading variant="pageName" as="h3" w="100%">Investments</Heading>
+                <Text>
+                  Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
+                </Text>
+              </VStack>
+            </HStack>
+          </GridItem>
+        </Grid>
+      </GridItem>
     </Grid>
   </>)
 }
