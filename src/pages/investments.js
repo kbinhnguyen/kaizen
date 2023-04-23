@@ -1,12 +1,15 @@
 import {
   Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem, Link,
-  Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel,
+  Accordion, AccordionItem, AccordionButton, AccordionPanel, HStack,
 } from '@chakra-ui/react';
+// import { MinusIcon, AddIcon, } from '@chakra-ui/icons';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 import Img from '../../public/placeholder1.png';
+import PlusIcon from '../../public/plus_round_icon.png';
+import MinusIcon from '../../public/minus_round_icon.png';
 
 export default function Investments() {
   return (
@@ -99,31 +102,85 @@ export default function Investments() {
           <Text>
             An entrepreneur’s decision on how to finance is a balance of timing, capital requirements, desired control, and retained equity. We can help evaluate the option which is best for you and your company.
           </Text>
-          <Accordion allowMultiple alignSelf="start" w="30%">
+          <Accordion allowMultiple alignSelf="start" w="70%">
             <AccordionItem>
-              <Heading><AccordionButton>Traditional Progression</AccordionButton></Heading>
-              <AccordionPanel>
-                <List spacing={4}>
-                  <ListItem>Personal Investment</ListItem>
-                  <ListItem>Family & Friends (DOD)</ListItem>
-                  <ListItem>Angel Financing</ListItem>
-                  <ListItem>Venture Capital Funding</ListItem>
-                  <ListItem>Mezzanine Financing</ListItem>
-                  <ListItem>Bank Lending</ListItem>
-                </List>
-              </AccordionPanel>
+              {({ isExpanded }) => (
+                <>
+                  <h5>
+                    <AccordionButton>
+                      <Box position="relative" w="40px" h="40px">
+                        <NextImage
+                          objectFit="cover"
+                          layout="fill"
+                          src={isExpanded ? MinusIcon : PlusIcon}
+                          alt="minus-icon"
+                        />
+                      </Box>
+                      <Box as="span" pl={2}>
+                        Traditional Progression
+                      </Box>
+                    </AccordionButton>
+                  </h5>
+                  <AccordionPanel>
+                    <List spacing={4}>
+                      <ListItem>Personal Investment</ListItem>
+                      <ListItem>Family & Friends (DOD)</ListItem>
+                      <ListItem>Angel Financing</ListItem>
+                      <ListItem>Venture Capital Funding</ListItem>
+                      <ListItem>Mezzanine Financing</ListItem>
+                      <ListItem>Bank Lending</ListItem>
+                    </List>
+                  </AccordionPanel>
+                </>
+              )}
             </AccordionItem>
             <AccordionItem>
-              <Heading><AccordionButton>Organic Options</AccordionButton></Heading>
-              <AccordionPanel>
-                (empty)
-              </AccordionPanel>
+            {({ isExpanded }) => (
+                <>
+                  <h5>
+                    <AccordionButton>
+                      <Box position="relative" w="40px" h="40px">
+                        <NextImage
+                          objectFit="cover"
+                          layout="fill"
+                          src={isExpanded ? MinusIcon : PlusIcon}
+                          alt="minus-icon"
+                        />
+                      </Box>
+                      <Box as="span" pl={2}>
+                        Organic Options
+                      </Box>
+                    </AccordionButton>
+                  </h5>
+                  <AccordionPanel>
+                    (empty)
+                  </AccordionPanel>
+                </>
+              )}
             </AccordionItem>
             <AccordionItem>
-              <Heading><AccordionButton>Innovative Solutions</AccordionButton></Heading>
-              <AccordionPanel>
-                (empty)
-              </AccordionPanel>
+            {({ isExpanded }) => (
+                <>
+                  <h5>
+                    <AccordionButton>
+                      <Box position="relative" w="40px" h="40px">
+                        <NextImage
+                          objectFit="cover"
+                          layout="fill"
+                          src={isExpanded ? MinusIcon : PlusIcon}
+                          alt="minus-icon"
+                        />
+                      </Box>
+                      <Box as="span" pl={2}>
+                        Innovative Solutions
+                      </Box>
+                    </AccordionButton>
+                  </h5>
+                  <AccordionPanel>
+                    (empty)
+                  </AccordionPanel>
+                </>
+              )}
             </AccordionItem>
           </Accordion>
         </VStack>

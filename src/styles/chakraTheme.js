@@ -1,4 +1,7 @@
-import { extendTheme, defineStyle, defineStyleConfig } from '@chakra-ui/react';
+import {
+  extendTheme, defineStyle, defineStyleConfig, createMultiStyleConfigHelpers
+} from '@chakra-ui/react';
+import { accordionAnatomy } from '@chakra-ui/anatomy';
 import { Global } from '@emotion/react';
 
 const colors = {
@@ -71,6 +74,28 @@ const textTheme = defineStyleConfig({
   }
 });
 
+const { definePartsStyle, defineMultiStyleConfig } =
+  createMultiStyleConfigHelpers(accordionAnatomy.keys);
+
+const accordionTheme = defineMultiStyleConfig({
+  baseStyle: {
+    container: {
+      border: 'none',
+    },
+    button: {
+      fontFamily: `'proxima-nova', sans-serif`,
+      fontWeight: 700,
+      fontSize: '20px',
+      textAlign: 'left',
+    },
+    panel: {
+      pl: '30%',
+      textAlign: 'left',
+      fontSize: '20px',
+    }
+  }
+});
+
 export const theme = extendTheme({
   colors,
   components: {
@@ -78,6 +103,7 @@ export const theme = extendTheme({
     Link: linkTheme,
     Icon: iconTheme,
     Text: textTheme,
+    Accordion: accordionTheme,
   },
   fonts: {
     heading: `'minerva-modern', sans-serif`,
