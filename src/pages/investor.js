@@ -1,4 +1,5 @@
-import { Box, VStack, Heading, Text, Divider } from '@chakra-ui/react';
+import { Box, VStack, Heading, Text, Divider, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 
@@ -19,7 +20,7 @@ export default function Investors() {
           <Text fontWeight="700" fontSize="24px" alignSelf="start">HERE&apos;S HOW TO REACH US</Text>
           <Text pt={2} alignSelf="start" w="30%">7086 Corporate Way Dayton, OH 45459-4294</Text>
           <VStack pt={2} spacing={0} w="100%">
-            <Text alignSelf="start">E: johara@cybeck.com</Text>
+            <Text alignSelf="start">E: <Link as={NextLink} href="mailto:johara@cybeck.com">johara@cybeck.com</Link></Text>
             <Text alignSelf="start">T: (937) 291-1900 ext. 256</Text>
           </VStack>
         </VStack>
