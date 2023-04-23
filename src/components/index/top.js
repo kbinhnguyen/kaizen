@@ -9,7 +9,6 @@ const style = {
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  position: 'relative',
 };
 
 export default function TopPanel() {
@@ -17,7 +16,7 @@ export default function TopPanel() {
   <>
     <div style={style}>
       <Header />
-      <Box position="absolute" w="45%" top="30%" left="10%">
+      <Box w="50%" pt="5%" pl="10%">
         <Heading as="h2" variant="tagline">Investing in and building business relationships with people who share our values.</Heading>
       </Box>
     </div>
