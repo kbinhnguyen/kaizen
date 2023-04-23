@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box
 } from '@chakra-ui/react';
@@ -16,7 +17,24 @@ const CircleIcon = (props) => (
   </Icon>
 );
 
+const sections = {
+    'Investments': {
+    description: 'Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.',
+    link: '/investments',
+  },
+  'Consulting': {
+    description: 'Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.',
+    link: '/consulting',
+  },
+  'Investors': {
+    description: 'Our investors serve as a great source for industry perspective, offer a network of relationships, and where appropriate, serve as board members and advisors to portfolio companies. We seek investors who are passionate about free enterprise and want to help small business entrepreneurs grow and prosper.',
+    link: '/investor',
+  }
+};
+
 export default function MidPanel() {
+  const [section, setSection] = useState('Investments');
+
   return (
   <>
     <Grid w="100vw" h="200vh" templateRows='repeat(2, 1fr)' px={20}>
@@ -52,19 +70,26 @@ export default function MidPanel() {
             />
           </GridItem>
           <GridItem pl={12}>
-            <HStack pt={28} spacing={12}>
+            <HStack pt={28} spacing={12} h="60%">
               <VStack spacing={1}>
-                <CircleIcon color="#33647E" />
-                <CircleIcon color="#DCE3EB" />
-                <CircleIcon color="#DCE3EB" />
+                <CircleIcon
+                  color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
+                  onClick={() => setSection('Investments')}
+                />
+                <CircleIcon
+                  color={section == 'Consulting' ? '#33647E' : '#DCE3EB'}
+                  onClick={() => setSection('Consulting')}
+                />
+                <CircleIcon
+                  color={section == 'Investors' ? '#33647E' : '#DCE3EB'}
+                  onClick={() => setSection('Investors')}
+                />
               </VStack>
               <VStack spacing={4}>
-                <Heading variant="pageName" as="h3" w="100%">Investments</Heading>
-                <Text>
-                  Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
-                </Text>
+                <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
+                <Text>{sections[section].description}</Text>
                 <Box w="100%">
-                  <Link variant="learnMore" w="max-content" as={NextLink} href="/investments">Learn More</Link>
+                  <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
                 </Box>
               </VStack>
             </HStack>
