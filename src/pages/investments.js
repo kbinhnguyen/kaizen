@@ -2,7 +2,6 @@ import {
   Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem, Link,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, HStack,
 } from '@chakra-ui/react';
-// import { MinusIcon, AddIcon, } from '@chakra-ui/icons';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import Header from '../components/shared/Header';
@@ -103,7 +102,7 @@ export default function Investments() {
             An entrepreneur’s decision on how to finance is a balance of timing, capital requirements, desired control, and retained equity. We can help evaluate the option which is best for you and your company.
           </Text>
           <Accordion allowMultiple alignSelf="start" w="70%">
-            <AccordionItem>
+            <AccordionItem pb={4}>
               {({ isExpanded }) => (
                 <>
                   <h5>
@@ -134,7 +133,7 @@ export default function Investments() {
                 </>
               )}
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem pb={4}>
             {({ isExpanded }) => (
                 <>
                   <h5>
