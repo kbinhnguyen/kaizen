@@ -23,7 +23,7 @@ export default function Footer() {
         <NavBar />
         <Divider />
         <Flex w="100%" justifyContent="space-between">
-          <Text color="#C2D5ED">2023 Kaizen Capital Partners. All Rights Reserved.</Text>
+          <Text color="#C2D5ED">&copy; 2023 Kaizen Capital Partners. All Rights Reserved.</Text>
           <HStack spacing={8}>
             <Text color="#C2D5ED">Terms & Conditions</Text>
             <Text color="#C2D5ED">Privacy Policy</Text>

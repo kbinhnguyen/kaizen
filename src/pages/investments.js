@@ -1,7 +1,9 @@
 import {
-  Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem
+  Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem, Link,
+  Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 import Img from '../../public/placeholder1.png';
@@ -81,7 +83,9 @@ export default function Investments() {
             </Text>
           </VStack>
           <Text pb={4}>
-            We do not broker companies but do offer mergers and acquisitions consulting for both sellers and buyers. Please contact us for additional information and current criteria for a potential acquisition.
+            We do not broker companies but do offer mergers and acquisitions consulting for both sellers and buyers. Please&nbsp;
+            <Link as={NextLink} href="/contact" textDecoration="underline">contact us</Link>
+            &nbsp;for additional information and current criteria for a potential acquisition.
           </Text>
           <Box w="100%" h="500px" position="relative">
             <NextImage
@@ -95,9 +99,34 @@ export default function Investments() {
           <Text>
             An entrepreneur’s decision on how to finance is a balance of timing, capital requirements, desired control, and retained equity. We can help evaluate the option which is best for you and your company.
           </Text>
+          <Accordion allowMultiple alignSelf="start" w="30%">
+            <AccordionItem>
+              <Heading><AccordionButton>Traditional Progression</AccordionButton></Heading>
+              <AccordionPanel>
+                <List spacing={4}>
+                  <ListItem>Personal Investment</ListItem>
+                  <ListItem>Family & Friends (DOD)</ListItem>
+                  <ListItem>Angel Financing</ListItem>
+                  <ListItem>Venture Capital Funding</ListItem>
+                  <ListItem>Mezzanine Financing</ListItem>
+                  <ListItem>Bank Lending</ListItem>
+                </List>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <Heading><AccordionButton>Organic Options</AccordionButton></Heading>
+              <AccordionPanel>
+                (empty)
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+              <Heading><AccordionButton>Innovative Solutions</AccordionButton></Heading>
+              <AccordionPanel>
+                (empty)
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
         </VStack>
-
-
       </VStack>
       <Footer />
     </>
