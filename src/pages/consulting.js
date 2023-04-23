@@ -9,11 +9,11 @@ export default function Consulting() {
   return (
     <>
       <Header />
-      <Box position="absolute" w="18%" h="52vh" right="33%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
+      <Box position="absolute" w="21%" h="52vh" right="32%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
       <VStack pt={6} pb={40} w="100vw" h="max-content" spacing={16}>
         <VStack w="50%" spacing={4}>
-          <Heading w="65%" as="h2">Knowledge & Perspectives</Heading>
-          <Heading as="h1" fontSize="64px">Consulting</Heading>
+          <Heading w="70%" pl={24} as="h2">Knowledge & Expertise</Heading>
+          <Heading w="55%" as="h1" fontSize="64px" textAlign="right">Consulting</Heading>
           <Text w="83%" color="#656565" pt={8} textAlign="justify">
             Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.
           </Text>

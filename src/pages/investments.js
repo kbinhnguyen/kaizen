@@ -14,11 +14,11 @@ export default function Investments() {
   return (
     <>
       <Header />
-      <Box position="absolute" w="20%" h="88vh" right="37%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
+      <Box position="absolute" w="20%" h="88vh" right="33%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
       <VStack pt={6} pb={40} w="100vw" h="max-content" spacing={16}>
         <VStack w="50%" spacing={4}>
-          <Heading w="65%" as="h2">Building Relationships</Heading>
-          <Heading as="h1" fontSize="64px">Investments</Heading>
+          <Heading w="45%" as="h2">Building Relationships</Heading>
+          <Heading as="h1" fontSize="64px" w="65%" textAlign="right">Investments</Heading>
           <Text w="83%" color="#656565" pt={8} textAlign="justify">
             Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
           </Text>
