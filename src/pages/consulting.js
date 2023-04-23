@@ -14,7 +14,7 @@ export default function Consulting() {
         <VStack w="50%" spacing={4}>
           <Heading w="65%" as="h2">Knowledge & Perspectives</Heading>
           <Heading as="h1" fontSize="64px">Consulting</Heading>
-          <Text w="80%" color="#656565" pt={8} textAlign="justify">
+          <Text w="83%" color="#656565" pt={8} textAlign="justify">
             Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.
           </Text>
         </VStack>

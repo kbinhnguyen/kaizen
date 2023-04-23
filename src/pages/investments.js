@@ -1,4 +1,6 @@
-import { Box, VStack, Heading, Text } from '@chakra-ui/react';
+import {
+  Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem
+} from '@chakra-ui/react';
 import NextImage from 'next/image';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
@@ -8,12 +10,12 @@ export default function Investments() {
   return (
     <>
       <Header />
-      <Box position="absolute" w="20%" h="92vh" right="37%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
+      <Box position="absolute" w="20%" h="88vh" right="37%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
       <VStack pt={6} pb={40} w="100vw" h="max-content" spacing={16}>
         <VStack w="50%" spacing={4}>
           <Heading w="65%" as="h2">Building Relationships</Heading>
           <Heading as="h1" fontSize="64px">Investments</Heading>
-          <Text w="80%" color="#656565" pt={8} textAlign="justify">
+          <Text w="83%" color="#656565" pt={8} textAlign="justify">
             Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
           </Text>
         </VStack>
@@ -24,6 +26,35 @@ export default function Investments() {
           <Text>
             Our investment partners are a diverse group, yet they all share a common vision for the opportunities of small business. We talk about “the three C’s”:
           </Text>
+          <List w="75%" spacing={12} fontSize="20px" pt={4} pb={6} textAlign="left">
+            <ListItem>
+              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
+                <GridItem fontWeight="700">01.</GridItem>
+                <GridItem fontWeight="700">Character</GridItem>
+                <GridItem></GridItem>
+                <GridItem>Personal and business values, culture, and beliefs.</GridItem>
+              </Grid>
+              <Divider borderColor="#5F5E5E" />
+            </ListItem>
+            <ListItem>
+              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
+                <GridItem fontWeight="700">02.</GridItem>
+                <GridItem fontWeight="700">Character</GridItem>
+                <GridItem></GridItem>
+                <GridItem>Industry knowledge, technical ability, and experience in small business.</GridItem>
+              </Grid>
+              <Divider borderColor="#5F5E5E" />
+            </ListItem>
+            <ListItem>
+              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
+                <GridItem fontWeight="700">03.</GridItem>
+                <GridItem fontWeight="700">Commitment</GridItem>
+                <GridItem></GridItem>
+                <GridItem>Personal passion and willingness to invest money, energy and time. We prefer meeting our potential partners, hosting an open exchange of background information, and getting to know each other long before we actually review “the numbers.” We believe no amount of legal paperwork will ever mitigate a poor business relationship.</GridItem>
+              </Grid>
+              <Divider borderColor="#5F5E5E" />
+            </ListItem>
+          </List>
           <Text fontWeight="700" fontSize="24px" alignSelf="start">INVESTMENT STRATEGY</Text>
           <VStack spacing={2}>
             <Text fontWeight="700" alignSelf="start">
