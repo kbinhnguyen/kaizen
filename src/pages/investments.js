@@ -111,7 +111,7 @@ export default function Investments() {
                       <Box position="relative" w="40px" h="40px">
                         <NextImage
                           objectFit="cover"
-                          layout="fill"
+                          layout="contain"
                           src={isExpanded ? MinusIcon : PlusIcon}
                           alt="minus-icon"
                         />
@@ -142,7 +142,7 @@ export default function Investments() {
                       <Box position="relative" w="40px" h="40px">
                         <NextImage
                           objectFit="cover"
-                          layout="fill"
+                          layout="contain"
                           src={isExpanded ? MinusIcon : PlusIcon}
                           alt="minus-icon"
                         />
@@ -165,7 +165,7 @@ export default function Investments() {
                     <AccordionButton>
                       <Box position="relative" w="40px" h="40px">
                         <NextImage
-                          objectFit="cover"
+                          objectFit="contain"
                           layout="fill"
                           src={isExpanded ? MinusIcon : PlusIcon}
                           alt="minus-icon"
