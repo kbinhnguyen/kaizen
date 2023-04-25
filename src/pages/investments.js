@@ -43,7 +43,7 @@ export default function Investments() {
             <ListItem>
               <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
                 <GridItem fontWeight="700">02.</GridItem>
-                <GridItem fontWeight="700">Character</GridItem>
+                <GridItem fontWeight="700">Capability</GridItem>
                 <GridItem></GridItem>
                 <GridItem>Industry knowledge, technical ability, and experience in small business.</GridItem>
               </Grid>
