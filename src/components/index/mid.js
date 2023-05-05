@@ -37,19 +37,23 @@ export default function MidPanel() {
 
   return (
   <>
-    <Grid w="100vw" minHeight="1600px" h="200vh" templateRows='repeat(2, 1fr)' px={20}>
+    <Grid w="100vw" minHeight="1600px" h="200vh" templateRows="repeat(2, 1fr)">
       <GridItem h="100%" pt={12} pb={6}>
-        <Grid h="100%" templateColumns="repeat(2, 1fr)">
-          <GridItem w="80%">
+        <Grid
+          h="100%"
+          templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
+          templateRows={{ base: '3fr 5fr', md: '1fr' }}
+        >
+          <GridItem w="100%" pl={{ base: 10, md: 20}} pr={10}>
             <VStack spacing={6} pt={28}>
-              <Heading variant="accented" as="h3" w="100%">OUR APPROACH</Heading>
-              <Heading fontSize="48px" as="h2" w="100%">Plan for tomorrow. Today.</Heading>
+              <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '18px', md: '20px' }}>OUR APPROACH</Heading>
+              <Heading fontSize={{ base: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
               <Text>
                 Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional return for all stakeholders.
               </Text>
             </VStack>
           </GridItem>
-          <GridItem h="100%" position="relative">
+          <GridItem h="100%" position="relative" mr={{ base: 0, md: 20}} ml={{ base: 40, md: 0 }}>
             <NextImage
               objectFit="cover"
               layout="fill"
@@ -60,8 +64,8 @@ export default function MidPanel() {
         </Grid>
       </GridItem>
       <GridItem h="100%" pb={12} pt={6}>
-        <Grid h="100%" templateColumns="repeat(2, 1fr)">
-          <GridItem h="100%" position="relative">
+        <Grid h="100%" templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}} templateRows={{ base: '2fr 3fr', md: '1fr' }}>
+          <GridItem h="100%" position="relative" ml={{ base: 0, md: 20}} mr={{ base: 40, md: 0 }}>
             <NextImage
               objectFit="cover"
               layout="fill"
@@ -69,7 +73,7 @@ export default function MidPanel() {
               alt="pebbles"
             />
           </GridItem>
-          <GridItem pl={12}>
+          <GridItem pr={{ base: 10, md: 20}} pl={12}>
             <HStack pt={28} spacing={12} h="60%">
               <VStack spacing={1}>
                 <CircleIcon

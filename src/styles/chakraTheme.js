@@ -20,7 +20,6 @@ const headingTheme = defineStyleConfig({
       fontFamily: `'proxima-nova', sans-serif`,
       color: '#33647E',
       fontWeight: 700,
-      fontSize: '20px',
     },
     pageName: {
       color: '#33647E',
@@ -70,7 +69,7 @@ const iconTheme = defineStyleConfig({
 
 const textTheme = defineStyleConfig({
   baseStyle: {
-    fontSize: '20px',
+    fontSize: { base: '18px', md: '20px' },
   }
 });
 
