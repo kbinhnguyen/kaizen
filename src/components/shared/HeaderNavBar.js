@@ -18,7 +18,7 @@ export default function HeaderNavBar() {
     return (
       <Stack
         direction="row"
-        spacing={12}
+        spacing={{ lg: 6, xl: 12 }}
         align="center"
       >
         {menu.map(({ item, href }) => (
