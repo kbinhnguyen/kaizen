@@ -27,7 +27,7 @@ const headingTheme = defineStyleConfig({
       fontSize: '40px',
     },
     tagline: {
-      fontSize: '40px',
+      fontSize: { base: '32px', md: '40px' },
       color: '#00263E',
     }
   }
