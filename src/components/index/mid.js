@@ -37,7 +37,7 @@ export default function MidPanel() {
 
   return (
   <>
-    <Grid w="100vw" h="200vh" templateRows='repeat(2, 1fr)' px={20}>
+    <Grid w="100vw" minHeight="1600px" h="200vh" templateRows='repeat(2, 1fr)' px={20}>
       <GridItem h="100%" pt={12} pb={6}>
         <Grid h="100%" templateColumns="repeat(2, 1fr)">
           <GridItem w="80%">

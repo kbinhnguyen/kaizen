@@ -15,7 +15,7 @@ const style = {
 export default function BottomPanel() {
   return (
   <>
-    <Grid w="100vw" h="100vh" templateRows="5fr 2fr" gap={14}>
+    <Grid w="100vw" h="100vh" minHeight="800px" templateRows="5fr 2fr" gap={14}>
       <GridItem w="100%" h="100%" style={style} display="flex" justifyContent="end">
         <VStack px={20} pt={32} w="45%" spacing={8}>
           <Heading variant="tagline" as="h2">Investing in and building business relationships with people who share our values.</Heading>

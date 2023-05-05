@@ -1,4 +1,6 @@
-import { Stack, Link, Box, Menu, MenuButton, MenuList, MenuItem, useBreakpointValue } from '@chakra-ui/react';
+import {
+  Stack, Link, Box, Menu, MenuButton, MenuList, MenuItem, useBreakpointValue
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 import NextImage from 'next/image';
 import HamburgerIcon from '../../../public/hamburger.svg';

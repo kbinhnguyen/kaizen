@@ -8,7 +8,7 @@ import NavBar from './HeaderNavBar';
 
 export default function Header() {
   return (
-    <Flex px={20} py={16} >
+    <Flex px={{ base: 10, md: 20 }} py={{ base: 12, md: 16 }} >
       <Link w="200px" as={NextLink} href="/">
         <NextImage src={Logo} alt="kaizen-logo" />
       </Link>

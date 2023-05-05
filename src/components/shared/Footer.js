@@ -9,6 +9,7 @@ export default function Footer() {
       direction="column"
       w="100vw"
       h="50vh"
+      minHeight="380px"
       bg="#00263E"
       alignItems="center"
       justifyContent="center"
