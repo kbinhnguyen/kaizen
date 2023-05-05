@@ -1,18 +1,44 @@
-import { Stack, Link } from '@chakra-ui/react';
+import { Stack, Link, Box, Menu, MenuButton, MenuList, MenuItem, useBreakpointValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import NextImage from 'next/image';
+import HamburgerIcon from '../../../public/hamburger.svg';
+
+const menu = [
+  { item: 'ABOUT', href: '/about'},
+  { item: 'INVESTMENTS', href: '/investments' },
+  { item: 'CONSULTING', href: '/consulting' },
+  { item: 'INVESTOR', href: '/investor' },
+  { item: 'CONTACT', href: '/contact' },
+];
 
 export default function HeaderNavBar() {
+  const isMobile = useBreakpointValue({ base: true, md: true, lg: false });
+
+  if (!isMobile) {
+    return (
+      <Stack
+        direction="row"
+        spacing={12}
+        align="center"
+      >
+        {menu.map(({ item, href }) => (
+           <Link key={item} variant="topNavBar" as={NextLink} href={href}>{item}</Link>
+        ))}
+      </Stack>
+    );
+  }
   return (
-    <Stack
-      direction="row"
-      spacing={12}
-      align="center"
-    >
-      <Link variant="topNavBar" as={NextLink} href="/about">ABOUT</Link>
-      <Link variant="topNavBar" as={NextLink} href="/investments">INVESTMENTS</Link>
-      <Link variant="topNavBar" as={NextLink} href="/consulting">CONSULTING</Link>
-      <Link variant="topNavBar" as={NextLink} href="/investor">INVESTOR</Link>
-      <Link variant="topNavBar" as={NextLink} href="/contact">CONTACT</Link>
-    </Stack>
+    <Menu>
+      <MenuButton as={Box} w="max-content" _hover={{ cursor: 'pointer' }}>
+        <NextImage src={HamburgerIcon} alt="hamburger-icon" />
+      </MenuButton>
+      <MenuList>
+        {menu.map(({ item, href }) => (
+          <MenuItem key={item}>
+            <Link as={NextLink} href={href} _hover={{ textDecoration: 'none' }} w="100%">{item}</Link>
+          </MenuItem>
+        ))}
+      </MenuList>
+    </Menu>
   );
 }

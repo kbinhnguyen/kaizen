@@ -1,4 +1,6 @@
-import { Flex, Image, Spacer, Link } from '@chakra-ui/react';
+import {
+  Flex, Image, Spacer, Link
+} from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import Logo from '../../../public/Group.png';
