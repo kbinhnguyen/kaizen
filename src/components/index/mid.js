@@ -98,7 +98,7 @@ export default function MidPanel() {
           display="flex"
           alignItems={{ base: 'center', md: 'start' }}
         >
-          <Stack w="max-content" spacing={1} direction={{ base:'row', md: 'column' }} pt={{ md: 32, lg: 16 }}>
+          <Stack w="max-content" spacing={1} direction={{ base:'row', md: 'column' }} pt={{ md: 32, lg: 20 }}>
             <CircleIcon
               color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
               onClick={() => setSection('Investments')}
@@ -115,7 +115,7 @@ export default function MidPanel() {
           <Stack spacing={{ base: 2, md: 4 }} direction="column">
             <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
             <Text>{sections[section].description}</Text>
-            <Box w="100%">
+            <Box w="100%" pt={{ base: 2, md: 0 }}>
               <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
             </Box>
           </Stack>
