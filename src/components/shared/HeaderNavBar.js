@@ -4,14 +4,8 @@ import {
 import NextLink from 'next/link';
 import NextImage from 'next/image';
 import HamburgerIcon from '../../../public/hamburger.svg';
+import { menu } from './menuItems';
 
-const menu = [
-  { item: 'ABOUT', href: '/about'},
-  { item: 'INVESTMENTS', href: '/investments' },
-  { item: 'CONSULTING', href: '/consulting' },
-  { item: 'INVESTOR', href: '/investor' },
-  { item: 'CONTACT', href: '/contact' },
-];
 
 export default function HeaderNavBar() {
   const isMobile = useBreakpointValue({ base: true, md: true, lg: false });

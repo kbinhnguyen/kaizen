@@ -8,15 +8,15 @@ export default function Footer() {
     <Flex
       direction="column"
       w="100vw"
-      h="50vh"
-      minHeight="380px"
+      h={{ base: 'max-content', md: '50vh' }}
+      minHeight={{ base: 'max-content', md: '380px' }}
       bg="#00263E"
       alignItems="center"
       justifyContent="center"
       py={12}
-      px={20}
+      px={{ base: 10, md: 20 }}
     >
-      <Box w="200px">
+      <Box w="200px" pb={{ base: 8, md: 0 }}>
         <NextImage src={Logo} alt="kaizen-logo" />
       </Box>
       <Spacer />

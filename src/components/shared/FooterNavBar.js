@@ -1,19 +1,38 @@
-import { Stack, Link } from '@chakra-ui/react';
+import { Stack, Link, Flex, useBreakpointValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { menu } from './menuItems';
 
 export default function FooterNavBar() {
+  const isDesktop = useBreakpointValue({ md: true, base: false });
+
+  if (isDesktop) {
+    return (
+      <Flex w="100%" direction="row" justifyContent="space-between">
+        <Link variant="bottomNavBar" as={NextLink} href="#top">TOP</Link>
+        <Stack
+          direction="row"
+          spacing={12}
+          align="center"
+        >
+          <Link variant="bottomNavBar" as={NextLink} href="/">HOME</Link>
+          {menu.map(({ item, href }) => (
+            <Link key={item} variant="bottomNavBar" as={NextLink} href={href}>{item}</Link>
+          ))}
+        </Stack>
+        <div />
+      </Flex>
+    );
+  }
+
   return (
-    <Stack
-      direction="row"
-      spacing={12}
-      align="center"
-    >
-      <Link variant="bottomNavBar" as={NextLink} href="/">HOME</Link>
-      <Link variant="bottomNavBar" as={NextLink} href="/about">ABOUT</Link>
-      <Link variant="bottomNavBar" as={NextLink} href="/investments">INVESTMENTS</Link>
-      <Link variant="bottomNavBar" as={NextLink} href="/consulting">CONSULTING</Link>
-      <Link variant="bottomNavBar" as={NextLink} href="/investor">INVESTOR</Link>
-      <Link variant="bottomNavBar" as={NextLink} href="/contact">CONTACT</Link>
+    <Stack w="100%" direction="column" spacing={8}>
+      <Stack w="100%" direction="column" spacing={6} align="start">
+        <Link  w="100%" variant="bottomNavBar" as={NextLink} href="/">HOME</Link>
+        {menu.map(({ item, href }) => (
+          <Link key={item} variant="bottomNavBar" as={NextLink} href={href}>{item}</Link>
+        ))}
+      </Stack>
+      <Link variant="bottomNavBar" as={NextLink} href="#top" alignSelf="center">TOP</Link>
     </Stack>
   );
 }
