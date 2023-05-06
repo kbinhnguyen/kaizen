@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box
+  Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box, useBreakpointValue,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
@@ -34,71 +34,64 @@ const sections = {
 
 export default function MidPanel() {
   const [section, setSection] = useState('Investments');
+  const isDesktop = useBreakpointValue({ md: true, base: false });
 
   return (
   <>
-    <Grid w="100vw" minHeight="1600px" h="200vh" templateRows="repeat(2, 1fr)">
-      <GridItem h="100%" pt={12} pb={6}>
-        <Grid
-          h="100%"
-          templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
-          templateRows={{ base: '3fr 5fr', md: '1fr' }}
-        >
-          <GridItem w="100%" pl={{ base: 10, md: 20}} pr={10}>
-            <VStack spacing={6} pt={28}>
-              <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '18px', md: '20px' }}>OUR APPROACH</Heading>
-              <Heading fontSize={{ base: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
-              <Text>
-                Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional return for all stakeholders.
-              </Text>
-            </VStack>
-          </GridItem>
-          <GridItem h="100%" position="relative" mr={{ base: 0, md: 20}} ml={{ base: 40, md: 0 }}>
-            <NextImage
-              objectFit="cover"
-              layout="fill"
-              src={FirstImg}
-              alt="high-rise-buildings"
-            />
-          </GridItem>
-        </Grid>
+    <Grid w="100vw" minHeight={{ base: '1000px', md: '1600px' }} h={{ md: '200vh', base: '1000px'}}
+      templateRows={{ base: '3fr 5fr 5fr 3fr', md: 'repeat(2, 1fr)'}}
+      templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
+      position="relative"
+    >
+      <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ sm: 10, lg: 20 }}>
+        <VStack spacing={6} pt={{ base: 20, md: 28 }}>
+          <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '18px', md: '20px' }}>OUR APPROACH</Heading>
+          <Heading fontSize={{ base: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
+          <Text>
+            Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional return for all stakeholders.
+          </Text>
+        </VStack>
       </GridItem>
-      <GridItem h="100%" pb={12} pt={6}>
-        <Grid h="100%" templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}} templateRows={{ base: '2fr 3fr', md: '1fr' }}>
-          <GridItem h="100%" position="relative" ml={{ base: 0, md: 20}} mr={{ base: 40, md: 0 }}>
-            <NextImage
-              objectFit="cover"
-              layout="fill"
-              src={SecondImg}
-              alt="pebbles"
+      <GridItem h="100%" position="relative" mr={{ base: 0, md: 20}} ml={{ base: 40, md: 0 }}>
+        <NextImage
+          style={{objectFit: 'cover'}}
+          fill={true}
+          src={FirstImg}
+          alt="high-rise-buildings"
+        />
+      </GridItem>
+      <GridItem h="100%" position="relative" ml={{ base: 0, md: 20}} mr={{ base: 40, md: 0 }} bg="blue">
+        <NextImage
+          style={{objectFit: 'cover'}}
+          fill={true}
+          src={SecondImg}
+          alt="pebbles"
+        />
+      </GridItem>
+      <GridItem pr={{ base: 10, md: 20}} pl={12}>
+        <HStack pt={28} spacing={12} h="60%">
+          <VStack spacing={1}>
+            <CircleIcon
+              color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
+              onClick={() => setSection('Investments')}
             />
-          </GridItem>
-          <GridItem pr={{ base: 10, md: 20}} pl={12}>
-            <HStack pt={28} spacing={12} h="60%">
-              <VStack spacing={1}>
-                <CircleIcon
-                  color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
-                  onClick={() => setSection('Investments')}
-                />
-                <CircleIcon
-                  color={section == 'Consulting' ? '#33647E' : '#DCE3EB'}
-                  onClick={() => setSection('Consulting')}
-                />
-                <CircleIcon
-                  color={section == 'Investors' ? '#33647E' : '#DCE3EB'}
-                  onClick={() => setSection('Investors')}
-                />
-              </VStack>
-              <VStack spacing={4}>
-                <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
-                <Text>{sections[section].description}</Text>
-                <Box w="100%">
-                  <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
-                </Box>
-              </VStack>
-            </HStack>
-          </GridItem>
-        </Grid>
+            <CircleIcon
+              color={section == 'Consulting' ? '#33647E' : '#DCE3EB'}
+              onClick={() => setSection('Consulting')}
+            />
+            <CircleIcon
+              color={section == 'Investors' ? '#33647E' : '#DCE3EB'}
+              onClick={() => setSection('Investors')}
+            />
+          </VStack>
+          <VStack spacing={4}>
+            <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
+            <Text>{sections[section].description}</Text>
+            <Box w="100%">
+              <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
+            </Box>
+          </VStack>
+        </HStack>
       </GridItem>
     </Grid>
   </>)
