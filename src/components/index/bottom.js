@@ -22,7 +22,7 @@ export default function BottomPanel() {
       gap={{ base: 0, md: 14 }}
     >
       <GridItem w="100%" h="100%" style={style} display="flex" justifyContent="end">
-        <VStack pr={{ base: 10, md: 20}} pt={{ base: 20, md: 32 }} w={{ base: '65%', md: '45%' }} spacing={8}>
+        <VStack pr={{ base: 10, md: 20}} pt={{ base: 24, sm: 28, lg: 32 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
           <Heading variant="tagline" as="h2">Investing in and building business relationships with people who share our values.</Heading>
           <Box w="100%">
             <Link variant="learnMore" w="max-content" as={NextLink} href="/contact">Schedule a Meeting</Link>
@@ -34,10 +34,10 @@ export default function BottomPanel() {
           templateColumns={{ base: '1fr', md: '7fr repeat(3, 5fr)' }}
           templateRows={{ base: 'repeat(4, max-content)', md: '1fr' }}
           gap={{ base: 8, md: 14 }}
-          pb={{ base: 8, md: 0 }}
+          pb={{ base: 8, md: 14 }}
         >
           <GridItem>
-            <VStack spacing={{ base: 2, md: 6 }} w={{ base: '80%', md: '65%' }}>
+            <VStack spacing={{ base: 2, md: 6 }} w={{ base: '80%', md: '100%', lg: '65%' }}>
               <Heading as="h2" w="100%" color="#33647E">Business Strategy</Heading>
               <Divider borderColor="#33647E" />
             </VStack>
@@ -45,19 +45,19 @@ export default function BottomPanel() {
           <GridItem>
             <VStack spacing={3}>
               <Heading as="h4" fontSize={{ base: '24px', md: '28px' }} w="100%" color="#33647E">Investments</Heading>
-              <Text fontSize="18px">We seek opportunities to invest in and build business relationships with people who share our values.</Text>
+              <Text w="100%" fontSize="18px">We seek opportunities to invest in and build business relationships with people who share our values.</Text>
             </VStack>
           </GridItem>
           <GridItem>
             <VStack spacing={3}>
               <Heading as="h4" fontSize={{ base: '24px', md: '28px' }} w="100%" color="#33647E">Consulting</Heading>
-              <Text fontSize="18px">We always look forward to sharing our knowledge and expertise.</Text>
+              <Text w="100%" fontSize="18px">We always look forward to sharing our knowledge and expertise.</Text>
             </VStack>
           </GridItem>
           <GridItem>
             <VStack spacing={3}>
               <Heading as="h4" fontSize={{ base: '24px', md: '28px' }} w="100%" color="#33647E">Investors</Heading>
-              <Text fontSize="18px">We seek investors who want to help others grow and prosper.</Text>
+              <Text w="100%" fontSize="18px">We seek investors who want to help others grow and prosper.</Text>
             </VStack>
           </GridItem>
         </Grid>

@@ -23,10 +23,10 @@ const headingTheme = defineStyleConfig({
     },
     pageName: {
       color: '#33647E',
-      fontSize: { base: '36px', md: '40px' },
+      fontSize: { base: '30px', md: '40px' },
     },
     tagline: {
-      fontSize: { base: '32px', md: '40px' },
+      fontSize: { base: '30px', md: '40px' },
       color: '#00263E',
     }
   }

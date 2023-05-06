@@ -46,8 +46,8 @@ export default function MidPanel() {
     >
       <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ base: 10, lg: 20 }}>
         <Stack spacing={{ base: 2, md: 6 }} pt={{ base: 12, md: 44 }} direction="column">
-          <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '18px', md: '20px' }}>OUR APPROACH</Heading>
-          <Heading fontSize={{ base: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
+          <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '16px', sm: '18px', md: '20px' }}>OUR APPROACH</Heading>
+          <Heading fontSize={{ base: '32px', sm: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
           <Text>
             Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional return for all stakeholders.
           </Text>
