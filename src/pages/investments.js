@@ -7,59 +7,128 @@ import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 import Img from '../../public/placeholder1.png';
-import PlusIcon from '../../public/plus_round_icon.png';
-import MinusIcon from '../../public/minus_round_icon.png';
+import PlusIcon from '../../public/plus_round_icon.svg';
+import MinusIcon from '../../public/minus_round_icon.svg';
 
 export default function Investments() {
   return (
     <>
       <Header />
-      <Box position="absolute" w="20%" h="88vh" right="33%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
-      <VStack pt={6} pb={40} w="100vw" h="max-content" spacing={16}>
-        <VStack w="50%" spacing={4}>
-          <Heading w="45%" as="h2">Building Relationships</Heading>
-          <Heading as="h1" fontSize="64px" w="65%" textAlign="right">Investments</Heading>
-          <Text w="83%" color="#656565" pt={8} textAlign="justify">
+      <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }}>
+        <VStack
+          w={{ base: '100%', md: '80%', lg: '50%' }}
+          px={{ base: 10, md: 0 }}
+          spacing={{ base: 0, md: 4 }}
+          py={10}
+          position="relative"
+        >
+          <Box
+            position="absolute"
+            w={{ base: '35%', md: '40%' }}
+            h={{ base: '90%', md: '100%' }}
+            right={{ base: 32, md: 40 }}
+            top={{ base: '5%', md: 0 }}
+            zIndex="-30"
+            bg="#DCE3EB"
+          ></Box>
+          <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Building Relationships</Heading>
+          <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Investments</Heading>
+          <Text w="83%" color="#656565" pt={{ base: 2, md: 8 }} textAlign="justify">
             Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
           </Text>
         </VStack>
-        <VStack w="55%" spacing={8} display="flex" textAlign="justify">
+        <VStack
+          w={{ base: '100%', md: '85%', lg: '60%' }}
+          px={{ base: 10, md: 0 }}
+          spacing={{ base: 4, md: 8 }}
+          display="flex"
+          textAlign="justify"
+        >
           <Text>
             We don’t just lend money; we partner with people and work with them to attain their goals and objectives through business. While we often invest financial resources, we also provide independent insights, governance, and management consulting rooted in decades of experience.
           </Text>
           <Text>
             Our investment partners are a diverse group, yet they all share a common vision for the opportunities of small business. We talk about “the three C’s”:
           </Text>
-          <List w="75%" spacing={12} fontSize="20px" pt={4} pb={6} textAlign="left">
+          <List
+            w={{ base: '100%', md: '75%' }}
+            spacing={{ base: 6, sm: 8, md: 12 }}
+            fontSize="20px"
+            pt={4}
+            pb={6}
+            textAlign="left"
+          >
             <ListItem>
-              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
-                <GridItem fontWeight="700">01.</GridItem>
-                <GridItem fontWeight="700">Character</GridItem>
+              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={{ base: 4, md: 8 }} gap={{ base: 2, md: 4 }}>
+                <GridItem>
+                  <Heading
+                    h="100%"
+                    as="h5"
+                    fontSize={{ base: '18px', md: '20px' }}
+                    fontWeight="700"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    01.
+                  </Heading>
+                </GridItem>
+                <GridItem fontWeight="700" fontSize={{ base: '18px', md: '20px' }}>Character</GridItem>
                 <GridItem></GridItem>
-                <GridItem>Personal and business values, culture, and beliefs.</GridItem>
+                <GridItem fontSize={{ base: '18px', md: '20px' }}>
+                  Personal and business values, culture, and beliefs.
+                </GridItem>
               </Grid>
               <Divider borderColor="#5F5E5E" />
             </ListItem>
             <ListItem>
-              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
-                <GridItem fontWeight="700">02.</GridItem>
-                <GridItem fontWeight="700">Capability</GridItem>
+              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={{ base: 4, md: 8 }} gap={{ base: 2, md: 4 }}>
+                <GridItem>
+                  <Heading
+                    h="100%"
+                    as="h5"
+                    fontSize={{ base: '18px', md: '20px' }}
+                    fontWeight="700"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    02.
+                  </Heading>
+                </GridItem>
+                <GridItem fontWeight="700" fontSize={{ base: '18px', md: '20px' }}>Capability</GridItem>
                 <GridItem></GridItem>
-                <GridItem>Industry knowledge, technical ability, and experience in small business.</GridItem>
+                <GridItem fontSize={{ base: '18px', md: '20px' }}>
+                  Industry knowledge, technical ability, and experience in small business.
+                </GridItem>
               </Grid>
               <Divider borderColor="#5F5E5E" />
             </ListItem>
             <ListItem>
-              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={8}>
-                <GridItem fontWeight="700">03.</GridItem>
-                <GridItem fontWeight="700">Commitment</GridItem>
+              <Grid w="95%" h="max-content" templateColumns="1fr 12fr" pb={{ base: 4, md: 8 }} gap={{ base: 2, md: 4 }}>
+                <GridItem h="100%">
+                  <Heading
+                    h="100%"
+                    as="h5"
+                    fontSize={{ base: '18px', md: '20px' }}
+                    fontWeight="700"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    03.
+                  </Heading>
+                </GridItem>
+                <GridItem fontWeight="700" fontSize={{ base: '18px', md: '20px' }}>Commitment</GridItem>
                 <GridItem></GridItem>
-                <GridItem>Personal passion and willingness to invest money, energy and time. We prefer meeting our potential partners, hosting an open exchange of background information, and getting to know each other long before we actually review “the numbers.” We believe no amount of legal paperwork will ever mitigate a poor business relationship.</GridItem>
+                <GridItem fontSize={{ base: '18px', md: '20px' }}>
+                  Personal passion and willingness to invest money, energy and time. We prefer meeting our potential partners, hosting an open exchange of background information, and getting to know each other long before we actually review “the numbers.” We believe no amount of legal paperwork will ever mitigate a poor business relationship.
+                </GridItem>
               </Grid>
               <Divider borderColor="#5F5E5E" />
             </ListItem>
           </List>
-          <Text fontWeight="700" fontSize="24px" alignSelf="start">INVESTMENT STRATEGY</Text>
+          <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start">INVESTMENT STRATEGY</Text>
           <VStack spacing={2}>
             <Text fontWeight="700" alignSelf="start">
               Mezzanine Financing
@@ -97,37 +166,36 @@ export default function Investments() {
               alt="image"
             />
           </Box>
-          <Text fontWeight="700" fontSize="24px" alignSelf="start" pt={4}>BUSINESS FUNDING</Text>
+          <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start" pt={4}>BUSINESS FUNDING</Text>
           <Text>
             An entrepreneur’s decision on how to finance is a balance of timing, capital requirements, desired control, and retained equity. We can help evaluate the option which is best for you and your company.
           </Text>
-          <Accordion allowMultiple alignSelf="start" w="70%">
+          <Accordion allowMultiple alignSelf="start" w={{ base: '100%', md: '70%' }}>
             <AccordionItem pb={4}>
               {({ isExpanded }) => (
                 <>
                   <h5>
                     <AccordionButton>
-                      <Box position="relative" w="40px" h="40px">
+                      <Box position="relative" w="32px" h="32px">
                         <NextImage
-                          objectFit="cover"
-                          layout="contain"
+                          style={{ objectFit: 'contain' }}
                           src={isExpanded ? MinusIcon : PlusIcon}
                           alt="minus-icon"
                         />
                       </Box>
-                      <Box as="span" pl={2}>
+                      <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>
                         Traditional Progression
                       </Box>
                     </AccordionButton>
                   </h5>
-                  <AccordionPanel>
+                  <AccordionPanel pl={{ base: 12, md: 24 }}>
                     <List spacing={4}>
-                      <ListItem>Personal Investment</ListItem>
-                      <ListItem>Family & Friends (DOD)</ListItem>
-                      <ListItem>Angel Financing</ListItem>
-                      <ListItem>Venture Capital Funding</ListItem>
-                      <ListItem>Mezzanine Financing</ListItem>
-                      <ListItem>Bank Lending</ListItem>
+                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Personal Investment</ListItem>
+                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Family & Friends (DOD)</ListItem>
+                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Angel Financing</ListItem>
+                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Venture Capital Funding</ListItem>
+                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Mezzanine Financing</ListItem>
+                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Bank Lending</ListItem>
                     </List>
                   </AccordionPanel>
                 </>
@@ -138,20 +206,19 @@ export default function Investments() {
                 <>
                   <h5>
                     <AccordionButton>
-                      <Box position="relative" w="40px" h="40px">
+                      <Box position="relative" w="32px" h="32px">
                         <NextImage
-                          objectFit="cover"
-                          layout="contain"
+                          style={{ objectFit: 'contain' }}
                           src={isExpanded ? MinusIcon : PlusIcon}
                           alt="minus-icon"
                         />
                       </Box>
-                      <Box as="span" pl={2}>
+                      <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>
                         Organic Options
                       </Box>
                     </AccordionButton>
                   </h5>
-                  <AccordionPanel>
+                  <AccordionPanel pl={{ base: 12, md: 24 }}>
                     (empty)
                   </AccordionPanel>
                 </>
@@ -162,20 +229,19 @@ export default function Investments() {
                 <>
                   <h5>
                     <AccordionButton>
-                      <Box position="relative" w="40px" h="40px">
+                      <Box position="relative" w="32px" h="32px">
                         <NextImage
-                          objectFit="contain"
-                          layout="fill"
+                          style={{ objectFit: 'contain' }}
                           src={isExpanded ? MinusIcon : PlusIcon}
                           alt="minus-icon"
                         />
                       </Box>
-                      <Box as="span" pl={2}>
+                      <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>
                         Innovative Solutions
                       </Box>
                     </AccordionButton>
                   </h5>
-                  <AccordionPanel>
+                  <AccordionPanel pl={{ base: 12, md: 24 }}>
                     (empty)
                   </AccordionPanel>
                 </>

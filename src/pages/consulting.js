@@ -47,7 +47,7 @@ export default function Consulting() {
           textAlign="justify"
           pb={{ base: 0, sm: 2, md: 4, lg: 6 }}
         >
-          <Text fontWeight="700" fontSize="24px" alignSelf="start">INVESTMENT EXPERTISE</Text>
+          <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start">INVESTMENT EXPERTISE</Text>
           <VStack spacing={2}>
             <Text fontWeight="700" alignSelf="start">
               Mergers & Acquisitions
