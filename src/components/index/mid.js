@@ -38,10 +38,9 @@ export default function MidPanel() {
 
   return (
   <>
-    <Grid w="100vw" minHeight={{ base: '1000px', md: '1600px' }} h={{ md: '200vh', base: '1000px'}}
-      templateRows={{ base: '3fr 5fr 5fr 3fr', md: 'repeat(2, 1fr)'}}
+    <Grid w="100vw" minHeight={{ base: 'max-content', md: '1600px' }} h={{ md: '200vh', base: 'max-content'}}
+      templateRows={{ base: 'repeat(4, max-content)', md: 'repeat(2, 1fr)'}}
       templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
-      position="relative"
     >
       <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ sm: 10, lg: 20 }}>
         <VStack spacing={6} pt={{ base: 20, md: 28 }}>
@@ -52,7 +51,7 @@ export default function MidPanel() {
           </Text>
         </VStack>
       </GridItem>
-      <GridItem h="100%" position="relative" mr={{ base: 0, md: 20}} ml={{ base: 40, md: 0 }}>
+      <GridItem h={{base: '400px', md: '100%' }} position="relative" mr={{ base: 0, md: 20}} ml={{ base: 40, md: 0 }}>
         <NextImage
           style={{objectFit: 'cover'}}
           fill={true}
@@ -60,7 +59,7 @@ export default function MidPanel() {
           alt="high-rise-buildings"
         />
       </GridItem>
-      <GridItem h="100%" position="relative" ml={{ base: 0, md: 20}} mr={{ base: 40, md: 0 }} bg="blue">
+      <GridItem h={{base: '400px', md: '100%' }}  position="relative" ml={{ base: 0, md: 20}} mr={{ base: 40, md: 0 }}>
         <NextImage
           style={{objectFit: 'cover'}}
           fill={true}
