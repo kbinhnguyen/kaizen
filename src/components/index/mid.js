@@ -90,8 +90,15 @@ export default function MidPanel() {
         </Box>
       </GridItem>
       <GridItem pr={{ base: 10, md: 20}} pl={{ base: 10, md: 12 }} pb={{ base: 12, md: 0 }}>
-        <Stack pt={{ base: 4, md: 28 }} spacing={{ base: 4, md: 12 }} h={{ base: 'max-content', md: '60%'}} direction={{ base: 'column', md: 'row' }}>
-          <Stack spacing={1} direction={{ base:'row', md: 'column' }} pt={{ md: 32, lg: 16 }}>
+        <Stack
+          pt={{ base: 4, md: 28 }}
+          spacing={{ base: 4, md: 12 }}
+          h={{ base: 'max-content', md: '60%'}}
+          direction={{ base: 'column', md: 'row' }}
+          display="flex"
+          alignItems={{ base: 'center', md: 'start' }}
+        >
+          <Stack w="max-content" spacing={1} direction={{ base:'row', md: 'column' }} pt={{ md: 32, lg: 16 }}>
             <CircleIcon
               color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
               onClick={() => setSection('Investments')}
