@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Heading, VStack, HStack, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box, useBreakpointValue,
+  Heading, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box, Stack,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
@@ -34,7 +34,6 @@ const sections = {
 
 export default function MidPanel() {
   const [section, setSection] = useState('Investments');
-  const isDesktop = useBreakpointValue({ md: true, base: false });
 
   return (
   <>
@@ -46,13 +45,13 @@ export default function MidPanel() {
       templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
     >
       <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ base: 10, lg: 20 }}>
-        <VStack spacing={{ base: 2, md: 6 }} pt={{ base: 12, md: 44 }}>
+        <Stack spacing={{ base: 2, md: 6 }} pt={{ base: 12, md: 44 }} direction="column">
           <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '18px', md: '20px' }}>OUR APPROACH</Heading>
           <Heading fontSize={{ base: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
           <Text>
             Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional return for all stakeholders.
           </Text>
-        </VStack>
+        </Stack>
       </GridItem>
       <GridItem
         h={{base: '400px', md: '100%' }}
@@ -90,9 +89,9 @@ export default function MidPanel() {
           />
         </Box>
       </GridItem>
-      <GridItem pr={{ base: 10, md: 20}} pl={12} pb={{ base: 12, md: 0 }}>
-        <HStack pt={{ base: 4, md: 28 }} spacing={12} h={{ base: 'max-content', md: '60%'}}>
-          <VStack spacing={1}>
+      <GridItem pr={{ base: 10, md: 20}} pl={{ base: 10, md: 12 }} pb={{ base: 12, md: 0 }}>
+        <Stack pt={{ base: 4, md: 28 }} spacing={{ base: 4, md: 12 }} h={{ base: 'max-content', md: '60%'}} direction={{ base: 'column', md: 'row' }}>
+          <Stack spacing={1} direction={{ base:'row', md: 'column' }} pt={{ md: 32, lg: 16 }}>
             <CircleIcon
               color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
               onClick={() => setSection('Investments')}
@@ -105,15 +104,15 @@ export default function MidPanel() {
               color={section == 'Investors' ? '#33647E' : '#DCE3EB'}
               onClick={() => setSection('Investors')}
             />
-          </VStack>
-          <VStack spacing={{ base: 2, md: 4}}>
+          </Stack>
+          <Stack spacing={{ base: 2, md: 4 }} direction="column">
             <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
             <Text>{sections[section].description}</Text>
             <Box w="100%">
               <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
             </Box>
-          </VStack>
-        </HStack>
+          </Stack>
+        </Stack>
       </GridItem>
     </Grid>
   </>)
