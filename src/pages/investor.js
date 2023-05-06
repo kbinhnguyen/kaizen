@@ -7,7 +7,7 @@ export default function Investors() {
   return (
     <>
       <Header />
-      <VStack pt={{ base: 0, md: 6 }} pb={{ base: 12, md: 24 }} w="100vw" h="max-content" spacing={{ base: 8, md: 16 }}>
+      <VStack pt={{ base: 0, md: 6 }} pb={{ base: 12, md: 24 }} w="100vw" h="max-content" spacing={{ base: 8, md: 16 }} minWidth="350px">
         <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 2, md: 4 }} px={{ base: 10, md: 0 }}>
           <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Industry Perspective</Heading>
           <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Investors</Heading>

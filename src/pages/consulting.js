@@ -1,3 +1,4 @@
+
 import { Box, VStack, Heading, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import Header from '../components/shared/Header';
@@ -6,19 +7,46 @@ import Img from '../../public/placeholder1.png';
 
 
 export default function Consulting() {
+
   return (
     <>
       <Header />
-      <Box position="absolute" w="21%" h="52vh" right="32%" top={32} zIndex="-30" bg="#DCE3EB"></Box>
-      <VStack pt={6} pb={40} w="100vw" h="max-content" spacing={16}>
-        <VStack w="50%" spacing={4}>
-          <Heading w="70%" pl={24} as="h2">Knowledge & Expertise</Heading>
-          <Heading w="55%" as="h1" fontSize="64px" textAlign="right">Consulting</Heading>
-          <Text w="83%" color="#656565" pt={8} textAlign="justify">
+      <VStack
+        pb={{ base: 12, sm: 20, md: 28, lg: 40}}
+        w="100vw" h="max-content"
+        spacing={{ base: 8, md: 16 }}
+        minWidth="350px"
+      >
+        <VStack
+          w={{ base: '100%', md: '80%', lg: '50%' }}
+          spacing={{ base: 0, md: 4 }}
+          px={{ base: 10, md: 0 }}
+          py={10}
+          position="relative"
+        >
+          <Box
+            position="absolute"
+            w={{ base: '35%', md: '40%' }}
+            h={{ base: '90%', md: '100%' }}
+            right={{ base: 32, md: 40 }}
+            top={{ base: '5%', md: 0 }}
+            zIndex="-30"
+            bg="#DCE3EB"
+          ></Box>
+          <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Knowledge & Expertise</Heading>
+          <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Consulting</Heading>
+          <Text w={{ base: '85%', md: '80%' }}  color="#656565" pt={{ base: 2, md: 8 }} textAlign="justify">
             Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.
           </Text>
         </VStack>
-        <VStack w="55%" spacing={8} display="flex" textAlign="justify" pb={6}>
+        <VStack
+          w={{ base: '100%', md: '85%', lg: '60%' }}
+          px={{ base: 10, md: 0 }}
+          spacing={{ base: 4, md: 8 }}
+          display="flex"
+          textAlign="justify"
+          pb={{ base: 0, sm: 2, md: 4, lg: 6 }}
+        >
           <Text fontWeight="700" fontSize="24px" alignSelf="start">INVESTMENT EXPERTISE</Text>
           <VStack spacing={2}>
             <Text fontWeight="700" alignSelf="start">
@@ -71,13 +99,19 @@ export default function Consulting() {
             Our team members have served on public and private boards, held C level positions in companies of all sizes, and counseled dozens of business leaders. Our process begins with a mutual interview to assure personal compatibility and appropriate skills matching.
           </Text>
         </VStack>
-        <Box w="55%" h="500px" position="relative">
-          <NextImage
-            objectFit="cover"
-            layout="fill"
-            src={Img}
-            alt="image"
-          />
+        <Box
+          w={{ base: '100%', md: '85%', lg: '60%' }}
+          px={{ base: 10, md: 0 }}
+          h={{ base: '300px', md: '400px' }}
+        >
+          <Box w="100%" h="100%" position="relative">
+            <NextImage
+              objectFit="cover"
+              layout="fill"
+              src={Img}
+              alt="image"
+            />
+          </Box>
         </Box>
       </VStack>
       <Footer />
