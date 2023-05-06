@@ -23,7 +23,7 @@ const headingTheme = defineStyleConfig({
     },
     pageName: {
       color: '#33647E',
-      fontSize: '40px',
+      fontSize: { base: '36px', md: '40px' },
     },
     tagline: {
       fontSize: { base: '32px', md: '40px' },
@@ -35,7 +35,7 @@ const headingTheme = defineStyleConfig({
 const linkTheme = defineStyleConfig({
   baseStyle: {
     fontWeight: 400,
-    fontSize: '20px',
+    fontSize: { base: '16px', md: '20px' },
     _hover: { opacity: 0.3 },
   },
   variants: {

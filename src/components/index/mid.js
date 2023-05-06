@@ -38,12 +38,15 @@ export default function MidPanel() {
 
   return (
   <>
-    <Grid w="100vw" minHeight={{ base: 'max-content', md: '1600px' }} h={{ md: '200vh', base: 'max-content'}}
+    <Grid
+      w="100vw"
+      minHeight={{ base: 'max-content', md: '1600px' }}
+      h={{ md: '200vh', base: 'max-content'}}
       templateRows={{ base: 'repeat(4, max-content)', md: 'repeat(2, 1fr)'}}
       templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
     >
-      <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ sm: 10, lg: 20 }}>
-        <VStack spacing={6} pt={{ base: 20, md: 28 }}>
+      <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ base: 10, lg: 20 }}>
+        <VStack spacing={{ base: 2, md: 6 }} pt={{ base: 12, md: 44 }}>
           <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '18px', md: '20px' }}>OUR APPROACH</Heading>
           <Heading fontSize={{ base: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>
           <Text>
@@ -51,24 +54,44 @@ export default function MidPanel() {
           </Text>
         </VStack>
       </GridItem>
-      <GridItem h={{base: '400px', md: '100%' }} position="relative" mr={{ base: 0, md: 20}} ml={{ base: 40, md: 0 }}>
-        <NextImage
-          style={{objectFit: 'cover'}}
-          fill={true}
-          src={FirstImg}
-          alt="high-rise-buildings"
-        />
+      <GridItem
+        h={{base: '400px', md: '100%' }}
+        mr={{ base: 0, md: 20 }}
+        ml={{ base: 40, md: 0 }}
+        my={{ base: 4, md: 0 }}
+        pt={{ base: 0, md: 6 }}
+        display="flex"
+        alignItems="center"
+      >
+        <Box h={{base: '100%', md: '95%'}} w="100%" position="relative">
+          <NextImage
+            style={{objectFit: 'cover'}}
+            fill={true}
+            src={FirstImg}
+            alt="high-rise-buildings"
+          />
+        </Box>
       </GridItem>
-      <GridItem h={{base: '400px', md: '100%' }}  position="relative" ml={{ base: 0, md: 20}} mr={{ base: 40, md: 0 }}>
-        <NextImage
-          style={{objectFit: 'cover'}}
-          fill={true}
-          src={SecondImg}
-          alt="pebbles"
-        />
+      <GridItem
+        h={{base: '400px', md: '100%' }}
+        ml={{ base: 0, md: 20 }}
+        mr={{ base: 40, md: 0 }}
+        my={{ base: 4, md: 0 }}
+        pb={{ base: 0, md: 6 }}
+        display="flex"
+        alignItems="center"
+      >
+        <Box h={{base: '100%', md: '95%'}} w="100%" position="relative">
+          <NextImage
+            style={{objectFit: 'cover'}}
+            fill={true}
+            src={SecondImg}
+            alt="pebbles"
+          />
+        </Box>
       </GridItem>
-      <GridItem pr={{ base: 10, md: 20}} pl={12}>
-        <HStack pt={28} spacing={12} h="60%">
+      <GridItem pr={{ base: 10, md: 20}} pl={12} pb={{ base: 12, md: 0 }}>
+        <HStack pt={{ base: 4, md: 28 }} spacing={12} h={{ base: 'max-content', md: '60%'}}>
           <VStack spacing={1}>
             <CircleIcon
               color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
@@ -83,7 +106,7 @@ export default function MidPanel() {
               onClick={() => setSection('Investors')}
             />
           </VStack>
-          <VStack spacing={4}>
+          <VStack spacing={{ base: 2, md: 4}}>
             <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
             <Text>{sections[section].description}</Text>
             <Box w="100%">
