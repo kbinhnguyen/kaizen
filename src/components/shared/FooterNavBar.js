@@ -25,8 +25,8 @@ export default function FooterNavBar() {
   }
 
   return (
-    <Stack w="100%" direction="column" spacing={8}>
-      <Stack w="100%" direction="column" spacing={6} align="start">
+    <Stack w="100%" direction="column" spacing={{ base: 4, md: 8 }}>
+      <Stack w="100%" direction="column" spacing={{ base: 2, md: 6 }} align="start">
         <Link  w="100%" variant="bottomNavBar" as={NextLink} href="/">HOME</Link>
         {menu.map(({ item, href }) => (
           <Link key={item} variant="bottomNavBar" as={NextLink} href={href}>{item}</Link>

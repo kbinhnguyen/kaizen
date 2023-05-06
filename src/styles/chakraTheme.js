@@ -35,7 +35,7 @@ const headingTheme = defineStyleConfig({
 const linkTheme = defineStyleConfig({
   baseStyle: {
     fontWeight: 400,
-    fontSize: { base: '16px', md: '20px' },
+    fontSize: { base: '16px', sm: '18px', md: '20px' },
     _hover: { opacity: 0.3 },
   },
   variants: {
@@ -69,7 +69,7 @@ const iconTheme = defineStyleConfig({
 
 const textTheme = defineStyleConfig({
   baseStyle: {
-    fontSize: { base: '18px', md: '20px' },
+    fontSize: { base: '16px', sm:'18px', md: '20px' },
   }
 });
 

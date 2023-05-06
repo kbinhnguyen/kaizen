@@ -18,7 +18,7 @@ export default function Footer() {
       bg="#00263E"
       alignItems="center"
       justifyContent="center"
-      py={12}
+      py={{ base: 8, md: 12 }}
       px={{ base: 10, md: 20 }}
     >
       <Box w="200px" pb={{ base: 8, md: 0 }}>
