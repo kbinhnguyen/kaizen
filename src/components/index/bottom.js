@@ -25,7 +25,7 @@ export default function BottomPanel() {
         <VStack pr={{ base: 10, md: 20}} pt={{ base: 24, sm: 28, lg: 32 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
           <Heading variant="tagline" as="h2">Investing in and building business relationships with people who share our values.</Heading>
           <Box w="100%">
-            <Link variant="learnMore" w="max-content" as={NextLink} href="/contact">Schedule a Meeting</Link>
+            <Link variant="learnMore" w="max-content" as={NextLink} href="/about">Learn More</Link>
           </Box>
         </VStack>
       </GridItem>
