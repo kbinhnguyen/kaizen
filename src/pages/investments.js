@@ -1,12 +1,12 @@
 import {
-  Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem, Link,
-  Accordion, AccordionItem, AccordionButton, AccordionPanel, HStack,
+  Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem, Link, HStack,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 import Img from '../../public/placeholder1.png';
+import CustomAccordion from '../components/investments/CustomAccordion';
 import PlusIcon from '../../public/plus_round_icon.svg';
 import MinusIcon from '../../public/minus_round_icon.svg';
 
@@ -170,84 +170,7 @@ export default function Investments() {
           <Text>
             An entrepreneur’s decision on how to finance is a balance of timing, capital requirements, desired control, and retained equity. We can help evaluate the option which is best for you and your company.
           </Text>
-          <Accordion allowMultiple alignSelf="start" w={{ base: '100%', md: '70%' }}>
-            <AccordionItem pb={4}>
-              {({ isExpanded }) => (
-                <>
-                  <h5>
-                    <AccordionButton>
-                      <Box position="relative" w="32px" h="32px">
-                        <NextImage
-                          style={{ objectFit: 'contain' }}
-                          src={isExpanded ? MinusIcon : PlusIcon}
-                          alt="minus-icon"
-                        />
-                      </Box>
-                      <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>
-                        Traditional Progression
-                      </Box>
-                    </AccordionButton>
-                  </h5>
-                  <AccordionPanel pl={{ base: 12, md: 24 }}>
-                    <List spacing={4}>
-                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Personal Investment</ListItem>
-                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Family & Friends (DOD)</ListItem>
-                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Angel Financing</ListItem>
-                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Venture Capital Funding</ListItem>
-                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Mezzanine Financing</ListItem>
-                      <ListItem fontSize={{ base: '18px', md: '20px' }}>Bank Lending</ListItem>
-                    </List>
-                  </AccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-            <AccordionItem pb={4}>
-            {({ isExpanded }) => (
-                <>
-                  <h5>
-                    <AccordionButton>
-                      <Box position="relative" w="32px" h="32px">
-                        <NextImage
-                          style={{ objectFit: 'contain' }}
-                          src={isExpanded ? MinusIcon : PlusIcon}
-                          alt="minus-icon"
-                        />
-                      </Box>
-                      <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>
-                        Organic Options
-                      </Box>
-                    </AccordionButton>
-                  </h5>
-                  <AccordionPanel pl={{ base: 12, md: 24 }}>
-                    (empty)
-                  </AccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-            <AccordionItem>
-            {({ isExpanded }) => (
-                <>
-                  <h5>
-                    <AccordionButton>
-                      <Box position="relative" w="32px" h="32px">
-                        <NextImage
-                          style={{ objectFit: 'contain' }}
-                          src={isExpanded ? MinusIcon : PlusIcon}
-                          alt="minus-icon"
-                        />
-                      </Box>
-                      <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>
-                        Innovative Solutions
-                      </Box>
-                    </AccordionButton>
-                  </h5>
-                  <AccordionPanel pl={{ base: 12, md: 24 }}>
-                    (empty)
-                  </AccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-          </Accordion>
+          <CustomAccordion />
         </VStack>
       </VStack>
       <Footer />
