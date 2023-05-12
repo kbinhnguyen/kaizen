@@ -4,7 +4,6 @@ import bg from '../../../public/AdobeStock_386588109.jpeg';
 
 const style = {
   height: '100%',
-  // width: '100%',
   backgroundImage: `url(${bg.src})`,
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',

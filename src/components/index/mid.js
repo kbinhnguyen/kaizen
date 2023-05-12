@@ -91,7 +91,7 @@ export default function MidPanel() {
       </GridItem>
       <GridItem pr={{ base: 10, md: 20}} pl={{ base: 10, md: 12 }} pb={{ base: 12, md: 0 }}>
         <Stack
-          pt={{ base: 4, md: 28 }}
+          pt={{ base: 4, md: 36, lg: 48 }}
           spacing={{ base: 4, md: 12 }}
           h={{ base: 'max-content', md: '60%'}}
           direction={{ base: 'column', md: 'row' }}

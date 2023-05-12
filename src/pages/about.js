@@ -40,8 +40,8 @@ export default function About() {
           </Text>
           <Box w="100%" h="500px" position="relative">
             <NextImage
-              objectFit="cover"
-              layout="fill"
+              style={{objectFit: 'cover'}}
+              fill={true}
               src={Img}
               alt="image"
             />
@@ -60,7 +60,12 @@ export default function About() {
           <Text>
             Second, we sincerely appreciate and respect the opportunities afforded everyone within the United States of America. We believe in the free enterprise system: freedom for individuals and businesses to operate and compete. We believe small business, through the jobs they create and the value they bring to their communities, is the fuel which drives economic growth and improves people’s lives.
           </Text>
-          <Grid w="100%" templateColumns="repeat(2, 1fr)" gap={{ base: 8, md: 16 }} pt={2}>
+          <Grid w="100%"
+            templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
+            templateRows={{ base: 'repeat(2, max-content)', md: '1fr' }}
+            gap={{ base: 8, md: 16 }}
+            pt={2}
+          >
             <GridItem>
               <Text fontWeight="700" fontSize={{base: '20px', md: '24px' }} alignSelf="start" pb={6}>OUR VALUES</Text>
               <Text textAlign="left">
@@ -72,7 +77,7 @@ export default function About() {
                 <GridItem>
                   <VStack spacing={4}>
                     <HStack spacing={4} w="100%">
-                      <Heading as="h5" fontSize="20px">01.</Heading>
+                      <Heading as="h5" fontSize="20px" fontWeight="450">01.</Heading>
                       <Text>Respect</Text>
                     </HStack>
                     <Divider borderColor="#5F5E5E" />
@@ -81,7 +86,7 @@ export default function About() {
                 <GridItem>
                   <VStack spacing={4}>
                     <HStack spacing={4} w="100%">
-                      <Heading as="h5" fontSize="20px">02.</Heading>
+                      <Heading as="h5" fontSize="20px" fontWeight="450">02.</Heading>
                       <Text>Integrity</Text>
                     </HStack>
                     <Divider borderColor="#5F5E5E" />
@@ -90,7 +95,7 @@ export default function About() {
                 <GridItem>
                   <VStack spacing={4}>
                     <HStack spacing={4} w="100%">
-                      <Heading as="h5" fontSize="20px">03.</Heading>
+                      <Heading as="h5" fontSize="20px" fontWeight="450">03.</Heading>
                       <Text>Responsibility</Text>
                     </HStack>
                     <Divider borderColor="#5F5E5E" />
@@ -99,7 +104,7 @@ export default function About() {
                 <GridItem>
                   <VStack spacing={4}>
                     <HStack spacing={4} w="100%">
-                      <Heading as="h5" fontSize="20px">04.</Heading>
+                      <Heading as="h5" fontSize="20px" fontWeight="450">04.</Heading>
                       <Text>Kaizen</Text>
                     </HStack>
                     <Divider borderColor="#5F5E5E" />
@@ -108,7 +113,7 @@ export default function About() {
                 <GridItem>
                   <VStack spacing={4}>
                     <HStack spacing={4} w="100%">
-                      <Heading as="h5" fontSize="20px">05.</Heading>
+                      <Heading as="h5" fontSize="20px" fontWeight="450">05.</Heading>
                       <Text>Pride</Text>
                     </HStack>
                     <Divider borderColor="#5F5E5E" />
@@ -117,7 +122,7 @@ export default function About() {
               </Grid>
             </GridItem>
           </Grid>
-          <Text fontWeight="700" fontSize={{base: '20px', md: '24px' }} alignSelf="start">OUR TEAM</Text>
+          <Text fontWeight="700" fontSize={{base: '20px', md: '24px' }} alignSelf="start" pt={{ base: 6, md: 0 }}>OUR TEAM</Text>
           <Grid
             w="100%"
             gap={{ base: 8, md: 10 }}
@@ -129,8 +134,8 @@ export default function About() {
                 <VStack spacing={2}>
                   <Box w="100%" h="450px" position="relative">
                     <NextImage
-                      objectFit="cover"
-                      layout="fill"
+                      style={{objectFit: 'cover'}}
+                      fill={true}
                       src={img}
                       alt="image"
                     />
