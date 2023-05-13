@@ -57,7 +57,7 @@ export default function CustomAccordion() {
                   <NextImage
                     style={{ objectFit: 'contain' }}
                     src={isExpanded ? MinusIcon : PlusIcon}
-                    alt="minus-icon"
+                    alt={isExpanded ? 'minus-icon' : 'plus-icon'}
                   />
                 </Box>
                 <Box as="span" pl={2} fontSize={{ base: '18px', md: '20px' }}>

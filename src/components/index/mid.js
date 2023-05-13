@@ -55,8 +55,8 @@ export default function MidPanel() {
       </GridItem>
       <GridItem
         h={{base: '400px', md: '100%' }}
-        mr={{ base: 0, md: 20 }}
-        ml={{ base: 40, md: 0 }}
+        mr={{ base: 20, md: 20 }}
+        ml={{ base: 20, md: 0 }}
         my={{ base: 4, md: 0 }}
         pt={{ base: 0, md: 6 }}
         display="flex"
@@ -73,8 +73,8 @@ export default function MidPanel() {
       </GridItem>
       <GridItem
         h={{base: '400px', md: '100%' }}
-        ml={{ base: 0, md: 20 }}
-        mr={{ base: 40, md: 0 }}
+        ml={{ base: 20, md: 20 }}
+        mr={{ base: 20, md: 0 }}
         my={{ base: 4, md: 0 }}
         pb={{ base: 0, md: 6 }}
         display="flex"
