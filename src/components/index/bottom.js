@@ -21,8 +21,8 @@ export default function BottomPanel() {
       gap={{ base: 0, md: 14 }}
     >
       <GridItem w="100%" h="100%" style={style} display="flex" justifyContent="end">
-        <VStack pr={{ base: 10, md: 20}} pt={{ base: 24, sm: 28, lg: 32 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
-          <Heading variant="tagline" as="h2">Investing in and building business relationships with people who share our values.</Heading>
+        <VStack pr={{ base: 10, md: 20}} pt={{ base: 32, sm: 36, lg: 40 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
+            <Heading variant="tagline" as="h2">Permanent Capital allows us to be patient for long-term results.</Heading>
           <Box w="100%">
             <Link variant="learnMore" w="max-content" as={NextLink} href="/about">Learn More</Link>
           </Box>

@@ -1,22 +1,41 @@
 import {
-  Box, VStack, Heading, Text, Grid, GridItem, HStack, Divider
+  Box, VStack, Heading, Text, Grid, GridItem, HStack, Divider, IconButton,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 import Img from '../../public/placeholder2.png';
-import ProfileImg from '../../public/placeholder3.png';
+import LinkedInIcon from '../../public/LI-In-Bug.png';
+import OharaImg from '../../public/Joe_OHara.jpg';
+import DavisImg from '../../public/Joe_Davis.jpg';
 
-const staff = [];
-const profile = {
-  name: 'Name',
-  title: 'Title/Position',
-  img: ProfileImg,
+const ohara = {
+  name: "Joseph M. O'Hara",
+  title: 'Managing Partner',
+  linkedIn: 'https://www.linkedin.com/in/jmohara/',
+  img: OharaImg,
 };
 
-for (let i = 0; i < 6; i++) {
-  staff.push(profile);
+const davis = {
+  name: 'Joseph W. Davis',
+  title: 'Partner',
+  linkedIn: 'https://www.linkedin.com/in/joe-davis-8a44b820/',
+  img: DavisImg,
 };
+
+const staff = [ohara, davis];
+
+const LIIcon = () => (
+  <Box w="25px" h="25px" position="relative" m={0}>
+    <NextImage
+      style={{objectFit: 'contain'}}
+      fill={true}
+      src={LinkedInIcon}
+      alt="linkedIn-logo"
+    />
+  </Box>
+);
+
 
 export default function About() {
   return (
@@ -143,9 +162,12 @@ export default function About() {
                   <Text w="100%" textAlign="left" color="#757575" pt={{ base: 0, md: 4 }}>
                     {name}
                   </Text>
-                  <Text w="100%" textAlign="left" fontSize="16px">
-                    {title}
-                  </Text>
+                  <HStack spacing={4} width="100%">
+                    <Text textAlign="left" fontSize="16px">
+                      {title}
+                    </Text>
+                    <IconButton icon={<LIIcon />} />
+                  </HStack>
                 </VStack>
               </GridItem>
             ))}

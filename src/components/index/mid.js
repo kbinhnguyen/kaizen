@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Heading, Grid, GridItem, Text, Icon, IconButton, Button, Link, Box, Stack,
+  Heading, Grid, GridItem, Text, Icon, Button, Link, Box, Stack,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
