@@ -5,10 +5,10 @@ import NextImage from 'next/image';
 import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import Img from '../../public/placeholder2.png';
+import Img from '../../public/AdobeStock_514819294.jpeg';
 import LinkedInIcon from '../../public/LI-In-Bug.png';
-import OharaImg from '../../public/Joe_OHara.jpg';
-import DavisImg from '../../public/Joe_Davis.jpg';
+import OharaImg from '../../public/Joe_OHara.jpeg';
+import DavisImg from '../../public/Joe_Davis.jpeg';
 
 const ohara = {
   name: "Joseph M. O'Hara",
@@ -58,7 +58,7 @@ export default function About() {
           <Text>
             Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional returns for all stakeholders.
           </Text>
-          <Box w="100%" h="500px" position="relative">
+          <Box w="100%" h={{ base: '40vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
             <NextImage
               style={{objectFit: 'cover'}}
               fill={true}
@@ -157,13 +157,13 @@ export default function About() {
                       style={{objectFit: 'cover'}}
                       fill={true}
                       src={img}
-                      alt="image"
+                      alt={`${name.split(' ')[1]}`}
                     />
                   </Box>
                   <Text w="100%" textAlign="left" color="#757575" pt={{ base: 0, md: 4 }}>
                     {name}
                   </Text>
-                  <HStack spacing={4} width="100%">
+                  <HStack spacing={{ base: 2, md: 4 }} width="100%">
                     <Text textAlign="left" fontSize={{ base: '14px', sm:'16px', md: '18px' }}>
                       {title}
                     </Text>
