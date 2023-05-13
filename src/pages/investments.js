@@ -5,7 +5,7 @@ import NextImage from 'next/image';
 import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import Img from '../../public/placeholder1.png';
+import Img from '../../public/AdobeStock_51349670.jpeg';
 import CustomAccordion from '../components/investments/CustomAccordion';
 import PlusIcon from '../../public/plus_round_icon.svg';
 import MinusIcon from '../../public/minus_round_icon.svg';
@@ -158,12 +158,12 @@ export default function Investments() {
             <Link as={NextLink} href="/contact" textDecoration="underline">contact us</Link>
             &nbsp;for additional information and current criteria for a potential acquisition.
           </Text>
-          <Box w="100%" h="500px" position="relative">
+          <Box w="100%" h={{ base: '40vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
             <NextImage
-              objectFit="cover"
-              layout="fill"
+              style={{objectFit: 'cover'}}
+              fill={true}
               src={Img}
-              alt="image"
+              alt="buildings"
             />
           </Box>
           <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start" pt={4}>BUSINESS FUNDING</Text>

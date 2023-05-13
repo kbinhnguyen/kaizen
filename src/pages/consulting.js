@@ -3,8 +3,7 @@ import { Box, VStack, Heading, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import Img from '../../public/placeholder1.png';
-
+import Img from '../../public/AdobeStock_252906008.jpeg';
 
 export default function Consulting() {
 
@@ -45,7 +44,6 @@ export default function Consulting() {
           spacing={{ base: 4, md: 8 }}
           display="flex"
           textAlign="justify"
-          pb={{ base: 0, sm: 2, md: 4, lg: 6 }}
         >
           <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start">INVESTMENT EXPERTISE</Text>
           <VStack spacing={2}>
@@ -95,24 +93,22 @@ export default function Consulting() {
               Many small business leaders and entrepreneurs find a trusted advisor, who has the knowledge and confidence to offer outside perspective and advice, a powerful influence in keeping their company moving toward its goals. As an ally, friend and motivator, we can help you identify strengths and weaknesses, expose talents, reignite passion, and discover new opportunities.
             </Text>
           </VStack>
-          <Text>
+          <Text pb={{ base: 0, sm: 2, md: 4, lg: 6 }}>
             Our team members have served on public and private boards, held C level positions in companies of all sizes, and counseled dozens of business leaders. Our process begins with a mutual interview to assure personal compatibility and appropriate skills matching.
           </Text>
-        </VStack>
-        <Box
-          w={{ base: '100%', md: '85%', lg: '60%' }}
-          px={{ base: 10, md: 0 }}
-          h={{ base: '300px', md: '400px' }}
-        >
-          <Box w="100%" h="100%" position="relative">
+          <Box
+            w="100%"
+            px={{ base: 10, md: 0 }}
+            h={{ base: '40vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative"
+          >
             <NextImage
-              objectFit="cover"
-              layout="fill"
+              style={{objectFit: 'cover'}}
+              fill={true}
               src={Img}
-              alt="image"
+              alt="hill-top"
             />
           </Box>
-        </Box>
+        </VStack>
       </VStack>
       <Footer />
     </>
