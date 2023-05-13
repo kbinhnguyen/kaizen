@@ -1,7 +1,8 @@
 import {
-  Box, VStack, Heading, Text, Grid, GridItem, HStack, Divider, IconButton,
+  Box, VStack, Heading, Text, Grid, GridItem, HStack, Divider, IconButton, Link,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import NextLink from 'next/link';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 import Img from '../../public/placeholder2.png';
@@ -148,7 +149,7 @@ export default function About() {
             templateRows={{ base: 'repeat(6, max-content)', md: 'repeat(3, max-content)' }}
             templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
           >
-            {staff.map(({ name, title, img }) => (
+            {staff.map(({ name, title, img, linkedIn }) => (
               <GridItem key={name}>
                 <VStack spacing={2}>
                   <Box w="100%" h="450px" position="relative">
@@ -163,10 +164,20 @@ export default function About() {
                     {name}
                   </Text>
                   <HStack spacing={4} width="100%">
-                    <Text textAlign="left" fontSize="16px">
+                    <Text textAlign="left" fontSize={{ base: '14px', sm:'16px', md: '18px' }}>
                       {title}
                     </Text>
-                    <IconButton icon={<LIIcon />} />
+                    <Link as={NextLink} href={linkedIn} display="flex" alignItems="center" target="_blank" rel="noopener noreferrer">
+                      <Box w="25px" h="25px" position="relative" m={0} as="button" _hover={{ opacity: 0.7 }}>
+                        <NextImage
+                          style={{objectFit: 'contain'}}
+                          fill={true}
+                          src={LinkedInIcon}
+                          alt="linkedIn-logo"
+                        />
+                      </Box>
+                    </Link>
+
                   </HStack>
                 </VStack>
               </GridItem>
