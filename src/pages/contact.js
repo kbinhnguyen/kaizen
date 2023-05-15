@@ -101,6 +101,8 @@ export default function Contact() {
                     <Text variant="formLabel">Tell us about your inquiry</Text>
                     <Textarea
                       id="inquiry"
+                      variant="customTextarea"
+                      mt={4}
                       {...register('inquiry', {
                         required: true,
                       })}

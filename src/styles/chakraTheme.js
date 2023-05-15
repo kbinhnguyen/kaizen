@@ -88,6 +88,21 @@ const textTheme = defineStyleConfig({
   }
 });
 
+const textareaTheme = defineStyleConfig({
+  variants: {
+    customTextarea: defineStyle({
+      border: '1px solid #5F5E5E',
+      borderRadius: 0,
+      '_focusVisible': {
+        borderColor: '#000000',
+        boxShadow: '0px 1px 0px 0px #000000'
+      },
+      fontFamily: `'proxima-nova', sans-serif`,
+      fontSize: { base: '16px', sm:'18px', md: '20px' },
+    }),
+  }
+});
+
 const { defineMultiStyleConfig: defineMultiStyleConfigAccordion } =
   createMultiStyleConfigHelpers(accordionAnatomy.keys);
 
@@ -126,6 +141,7 @@ const inputTheme = defineMultiStyleConfigInput({
           boxShadow: '0px 1px 0px 0px black'
         },
         fontFamily: `'proxima-nova', sans-serif`,
+        fontSize: { base: '16px', sm:'18px', md: '20px' },
       }
     }),
   }
@@ -140,6 +156,7 @@ export const theme = extendTheme({
     Text: textTheme,
     Accordion: accordionTheme,
     Input: inputTheme,
+    Textarea: textareaTheme,
   },
   fonts: {
     heading: `'minerva-modern', sans-serif`,
