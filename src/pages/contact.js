@@ -1,14 +1,23 @@
-import { Box, VStack, Heading, Text, Divider, Link } from '@chakra-ui/react';
+import {
+  Box, VStack, Heading, Text, Divider, Link, FormControl, FormLabel, FormErrorMessage,
+  FormHelperText, Input, Textarea,
+} from '@chakra-ui/react';
+import { useForm } from 'react-hook-form';
 import NextLink from 'next/link';
 import Head from 'next/head';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 
 export default function Contact() {
+  const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm();
+  const onSubmit = () => {
+    console.log('submitted');
+  };
+
   return (
     <>
       <Head>
-        <title>Kaizen | Investor</title>
+        <title>Kaizen | Contact Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
@@ -17,16 +26,49 @@ export default function Contact() {
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }}>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
           </VStack>
-          <VStack w={{ base: '100%', md: '85%', lg: '60%' }} spacing={{ base: 4, md: 8 }} display="flex" px={{ base: 10, md: 0 }}>
-            <Text fontWeight="700" fontSize={{ base: '20px', md: '24px' }} alignSelf="start">HERE&apos;S HOW TO REACH US</Text>
-            <Text pt={{ base: 0, md: 2 }} alignSelf="start" w="max-content">7086 Corporate Way<br />Dayton, OH 45459-4294</Text>
-            <VStack pt={{ base: 0, md: 2 }} spacing={0} w="100%">
-              <Text alignSelf="start">
-                E: <Link as={NextLink} href="mailto:johara@cybeck.com">johara@cybeck.com</Link>
-              </Text>
-              <Text alignSelf="start">T: (937) 291-1900 ext. 256</Text>
-            </VStack>
-          </VStack>
+          <form onSubmit={handleSubmit(onSubmit)} w="100%">
+            <FormControl isInvalid={errors.name}>
+              <FormLabel htmlFor="firstName">First Name</FormLabel>
+              <Input
+                id="firstName"
+                type="text"
+                {...register('firstName', {
+                  required: true,
+                })}
+              />
+              <FormLabel htmlFor="lastName">Last Name</FormLabel>
+              <Input
+                id="lastName"
+                type="text"
+                {...register('lastName', {
+                  required: true,
+                })}
+              />
+              <FormLabel htmlFor="phone">Phone</FormLabel>
+              <Input
+                id="phone"
+                type="tel"
+                {...register('phone', {
+                  required: true,
+                })}
+              />
+              <FormLabel htmlFor="phone">Email</FormLabel>
+              <Input
+                id="email"
+                type="email"
+                {...register('email', {
+                  required: true,
+                })}
+              />
+              <FormLabel htmlFor="inquiry">Tell us about your inquiry</FormLabel>
+              <Textarea
+                id="inquiry"
+                {...register('inquiry', {
+                  required: true,
+                })}
+              />
+            </FormControl>
+          </form>
         </VStack>
         <Footer />
       </main>
