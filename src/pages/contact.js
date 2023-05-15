@@ -8,6 +8,11 @@ import Head from 'next/head';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
 
+const focusInputStyle = {
+  p: { color: '#33647E' },
+};
+
+
 export default function Contact() {
   const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm();
   const onSubmit = () => {
@@ -36,63 +41,76 @@ export default function Contact() {
                 alignSelf="center"
               >
                 <GridItem w="100%">
-                  <FormLabel htmlFor="firstName" w="100%">First Name</FormLabel>
-                  <Input
-                    w="100%"
-                    id="firstName"
-                    variant="flushed"
-                    type="text"
-                    {...register('firstName', {
-                      required: true,
-                    })}
-                  />
+                  <FormLabel htmlFor="firstName" w="100%" _focusWithin={focusInputStyle}>
+                    <Text variant="formLabel">First Name</Text>
+                    <Input
+                      w="100%"
+                      id="firstName"
+                      variant="flushed"
+                      type="text"
+                      {...register('firstName', {
+                        required: true,
+                      })}
+                    />
+                  </FormLabel>
                 </GridItem>
-                <GridItem>
-                  <FormLabel htmlFor="lastName">Last Name</FormLabel>
+                <GridItem w="100%">
+                  <FormLabel w="100%" htmlFor="lastName" _focusWithin={focusInputStyle}>
+                  <Text variant="formLabel">Last Name</Text>
                   <Input
                     id="lastName"
+                    w="100%"
                     variant="flushed"
                     type="text"
                     {...register('lastName', {
                       required: true,
                     })}
                   />
+                  </FormLabel>
                 </GridItem>
-                <GridItem>
-                  <FormLabel htmlFor="phone">Phone</FormLabel>
-                  <Input
-                    id="phone"
-                    variant="flushed"
-                    type="tel"
-                    {...register('phone', {
-                      required: true,
-                    })}
-                  />
+                <GridItem w="100%">
+                  <FormLabel w="100%" htmlFor="phone" _focusWithin={focusInputStyle}>
+                    <Text w="100%" variant="formLabel">Phone</Text>
+                    <Input
+                      id="phone"
+                      w="100%"
+                      variant="flushed"
+                      // type="tel"
+                      {...register('phone', {
+                        required: true,
+                      })}
+                    />
+                  </FormLabel>
                 </GridItem>
-                <GridItem>
-                  <FormLabel htmlFor="phone">Email</FormLabel>
-                  <Input
-                    id="email"
-                    variant="flushed"
-                    type="email"
-                    {...register('email', {
-                      required: true,
-                    })}
-                  />
+                <GridItem w="100%">
+                  <FormLabel w="100%" htmlFor="email" _focusWithin={focusInputStyle}>
+                    <Text w="100%" variant="formLabel">Email</Text>
+                    <Input
+                      id="email"
+                      w="100%"
+                      variant="flushed"
+                      type="email"
+                      {...register('email', {
+                        required: true,
+                      })}
+                    />
+                  </FormLabel>
                 </GridItem>
                 <GridItem gridColumn='1 / 3'>
-                  <FormLabel htmlFor="inquiry">Tell us about your inquiry</FormLabel>
-                  <Textarea
-                    id="inquiry"
-                    {...register('inquiry', {
-                      required: true,
-                    })}
+                  <FormLabel htmlFor="inquiry" _focusWithin={focusInputStyle}>
+                    <Text variant="formLabel">Tell us about your inquiry</Text>
+                    <Textarea
+                      id="inquiry"
+                      {...register('inquiry', {
+                        required: true,
+                      })}
                   />
+                  </FormLabel>
                 </GridItem>
               </Grid>
-              <FormHelperText>* All fields required to submit contact form</FormHelperText>
+              <FormHelperText pt={6}>* All fields required to submit contact form</FormHelperText>
             </FormControl>
-            <Button type="submit" isLoading={isSubmitting}>Submit</Button>
+            <Button mt={4} type="submit" isLoading={isSubmitting}>Submit</Button>
           </form>
           </VStack>
 

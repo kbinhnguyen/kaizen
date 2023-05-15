@@ -1,7 +1,7 @@
 import {
   extendTheme, defineStyle, defineStyleConfig, createMultiStyleConfigHelpers
 } from '@chakra-ui/react';
-import { accordionAnatomy } from '@chakra-ui/anatomy';
+import { accordionAnatomy, inputAnatomy } from '@chakra-ui/anatomy';
 import { Global } from '@emotion/react';
 
 const colors = {
@@ -77,13 +77,26 @@ const iconTheme = defineStyleConfig({
 const textTheme = defineStyleConfig({
   baseStyle: {
     fontSize: { base: '16px', sm:'18px', md: '20px' },
+  },
+  variants: {
+    formLabel: {
+      fontFamily: `'Open Sans', sans-serif`,
+      fontWeight: 600,
+      color: '#5F5E5E',
+      fontSize: '14px'
+    }
   }
 });
 
-const { definePartsStyle, defineMultiStyleConfig } =
+const { defineMultiStyleConfig: defineMultiStyleConfigAccordion } =
   createMultiStyleConfigHelpers(accordionAnatomy.keys);
 
-const accordionTheme = defineMultiStyleConfig({
+const {
+  definePartsStyle: definePartsStyleInput,
+  defineMultiStyleConfig: defineMultiStyleConfigInput
+} = createMultiStyleConfigHelpers(inputAnatomy.keys)
+
+const accordionTheme = defineMultiStyleConfigAccordion({
   baseStyle: {
     container: {
       border: 'none',
@@ -102,6 +115,22 @@ const accordionTheme = defineMultiStyleConfig({
   }
 });
 
+const inputTheme = defineMultiStyleConfigInput({
+  variants: {
+    flushed: definePartsStyleInput({
+      field: {
+        borderBottom: '1px solid',
+        borderColor: '#5F5E5E',
+        _focus: {
+          borderColor: 'black',
+          boxShadow: '0px 1px 0px 0px black'
+        },
+        fontFamily: `'proxima-nova', sans-serif`,
+      }
+    }),
+  }
+});
+
 export const theme = extendTheme({
   colors,
   components: {
@@ -110,6 +139,7 @@ export const theme = extendTheme({
     Icon: iconTheme,
     Text: textTheme,
     Accordion: accordionTheme,
+    Input: inputTheme,
   },
   fonts: {
     heading: `'minerva-modern', sans-serif`,
