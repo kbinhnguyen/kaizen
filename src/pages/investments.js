@@ -164,7 +164,7 @@ export default function Investments() {
               <Link as={NextLink} href="/contact" textDecoration="underline">contact us</Link>
               &nbsp;for additional information and current criteria for a potential acquisition.
             </Text>
-            <Box w="100%" h={{ base: '40vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
+            <Box w="100%" h={{ base: '35vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
               <NextImage
                 style={{objectFit: 'cover'}}
                 fill={true}

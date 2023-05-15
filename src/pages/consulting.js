@@ -105,7 +105,7 @@ export default function Consulting() {
             <Box
               w="100%"
               px={{ base: 10, md: 0 }}
-              h={{ base: '40vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative"
+              h={{ base: '35vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative"
             >
               <NextImage
                 style={{objectFit: 'cover'}}

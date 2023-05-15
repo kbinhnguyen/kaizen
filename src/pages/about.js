@@ -64,7 +64,7 @@ export default function About() {
             <Text>
               Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional returns for all stakeholders.
             </Text>
-            <Box w="100%" h={{ base: '40vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
+            <Box w="100%" h={{ base: '35vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
               <NextImage
                 style={{objectFit: 'cover'}}
                 fill={true}
