@@ -22,21 +22,23 @@ export default function Contact() {
       </Head>
       <main>
         <Header />
-        <VStack pt={{ base: 0, md: 6 }} pb={{ base: 12, md: 24 }} w="100vw" h="max-content" spacing={{ base: 8, md: 16 }} minWidth="350px">
-          <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }}>
+        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }}>
+          <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }} spacing={12}>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
-          </VStack>
-          <form onSubmit={handleSubmit(onSubmit)} w="100%">
-            <FormControl isInvalid={errors.name}>
+            <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
+            <FormControl isInvalid={errors.name} display="flex" flexDirection="column" w="100%">
               <Grid
                 w="100%"
                 templateColumns='repeat(2, 1fr)'
                 templateRows='repeat(3, max-content)'
-                gap={4}
+                columnGap={12}
+                rowGap={8}
+                alignSelf="center"
               >
-                <GridItem>
-                  <FormLabel htmlFor="firstName">First Name</FormLabel>
+                <GridItem w="100%">
+                  <FormLabel htmlFor="firstName" w="100%">First Name</FormLabel>
                   <Input
+                    w="100%"
                     id="firstName"
                     variant="flushed"
                     type="text"
@@ -92,6 +94,8 @@ export default function Contact() {
             </FormControl>
             <Button type="submit" isLoading={isSubmitting}>Submit</Button>
           </form>
+          </VStack>
+
         </VStack>
         <Footer />
       </main>
