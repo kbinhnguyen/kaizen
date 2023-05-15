@@ -1,7 +1,7 @@
 import {
   Stack, Link, Box, Menu, MenuButton, MenuList, MenuItem, useBreakpointValue, Button,
   Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton,
-  useDisclosure, Divider,
+  useDisclosure, Divider, Flex,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import NextImage from 'next/image';
@@ -41,15 +41,15 @@ export default function HeaderNavBar() {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Box as={DrawerCloseButton} _hover={{ bg: 'none', opacity: 0.6 }} pt={6}>
-            <NextImage src={CloseButton} alt="close-button" />
-          </Box>
-          <DrawerHeader pt={6}>
-            <Link as={NextLink} href="/">
-              <Box w="150px">
-                <NextImage src={Logo} alt="kaizen-logo" />
+          <DrawerHeader pt={4} display="flex" direction="row" justifyContent="space-between" alignItems="center">
+              <Link as={NextLink} href="/">
+                <Box w="150px">
+                  <NextImage src={Logo} alt="kaizen-logo" />
+                </Box>
+              </Link>
+              <Box h="30px" w="30px" _hover={{ opacity: 0.6, cursor: 'pointer' }} onClick={() => onClose()} position="relative">
+                <NextImage src={CloseButton} alt="close-button" style={{ objectFit: 'contain' }} fill={true} />
               </Box>
-            </Link>
           </DrawerHeader>
           <DrawerBody>
             <Stack
