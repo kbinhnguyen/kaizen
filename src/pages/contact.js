@@ -14,7 +14,7 @@ const focusInputStyle = {
 
 
 export default function Contact() {
-  const { handleSubmit, register, formState: { errors, isSubmitting } } = useForm();
+  const { handleSubmit, register, formState: { errors, isSubmitting, isValid } } = useForm();
   const onSubmit = () => {
     console.log('submitted');
   };
@@ -27,15 +27,15 @@ export default function Contact() {
       </Head>
       <main>
         <Header />
-        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }}>
+        <VStack pb={{ base: 12, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="350px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }} spacing={12}>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
             <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
             <FormControl isInvalid={errors.name} display="flex" flexDirection="column" w="100%">
               <Grid
                 w="100%"
-                templateColumns='repeat(2, 1fr)'
-                templateRows='repeat(3, max-content)'
+                templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
+                templateRows={{ base: 'repeat(5, max-content)', md: 'repeat(3, max-content)' }}
                 columnGap={12}
                 rowGap={8}
                 alignSelf="center"
@@ -75,7 +75,7 @@ export default function Contact() {
                       id="phone"
                       w="100%"
                       variant="flushed"
-                      // type="tel"
+                      type="tel"
                       {...register('phone', {
                         required: true,
                       })}
@@ -96,11 +96,12 @@ export default function Contact() {
                     />
                   </FormLabel>
                 </GridItem>
-                <GridItem gridColumn='1 / 3'>
-                  <FormLabel htmlFor="inquiry" _focusWithin={focusInputStyle}>
-                    <Text variant="formLabel">Tell us about your inquiry</Text>
+                <GridItem gridColumn={{ md: '1 / 3'}} w="100%">
+                  <FormLabel htmlFor="inquiry" _focusWithin={focusInputStyle} w="100%">
+                    <Text variant="formLabel" w="100%">Tell us about your inquiry</Text>
                     <Textarea
                       id="inquiry"
+                      w="100%"
                       variant="customTextarea"
                       mt={4}
                       {...register('inquiry', {
@@ -112,10 +113,17 @@ export default function Contact() {
               </Grid>
               <FormHelperText pt={6}>* All fields required to submit contact form</FormHelperText>
             </FormControl>
-            <Button mt={4} type="submit" isLoading={isSubmitting}>Submit</Button>
+            <Button
+              variant="customBtn"
+              mt={4}
+              type="submit"
+              isLoading={isSubmitting}
+              isDisabled={!isValid}
+            >
+              Submit
+            </Button>
           </form>
           </VStack>
-
         </VStack>
         <Footer />
       </main>

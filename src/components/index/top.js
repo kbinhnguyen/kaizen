@@ -6,6 +6,7 @@ const style = (isDesktop) => ({
   height: isDesktop ? '100vh' : '600px',
   minHeight: isDesktop ? '800px' : '600px',
   width: '100vw',
+  minWidth: '350px',
   backgroundImage: `url(${bg.src})`,
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',

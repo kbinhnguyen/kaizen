@@ -48,7 +48,7 @@ export default function About() {
       </Head>
       <main>
         <Header />
-        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }}>
+        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }} minWidth="350px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 0, md: 4 }} px={{ base: 10, md: 0 }}>
             <Heading w="100%" pl={{ base: 12, sm: 24, md: 48 }} as="h2">About</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Kaizen</Heading>
@@ -152,7 +152,7 @@ export default function About() {
             <Grid
               w="100%"
               gap={{ base: 8, md: 10 }}
-              templateRows={{ base: 'repeat(6, max-content)', md: 'repeat(3, max-content)' }}
+              templateRows={{ base: 'repeat(2, max-content)', md: 'repeat(1, max-content)' }}
               templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
             >
               {staff.map(({ name, title, img, linkedIn }) => (
@@ -183,7 +183,6 @@ export default function About() {
                           />
                         </Box>
                       </Link>
-
                     </HStack>
                   </VStack>
                 </GridItem>

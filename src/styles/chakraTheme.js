@@ -103,6 +103,22 @@ const textareaTheme = defineStyleConfig({
   }
 });
 
+const buttonTheme = defineStyleConfig({
+  variants: {
+    customBtn: defineStyle({
+      borderRadius: 0,
+      bg: '#000000',
+      fontFamily: `'Open Sans', sans-serif`,
+      fontWeight: 600,
+      color: '#FFFFFF',
+      px: 8,
+      _disabled: {
+        opacity: 0.3,
+      }
+    }),
+  }
+});
+
 const { defineMultiStyleConfig: defineMultiStyleConfigAccordion } =
   createMultiStyleConfigHelpers(accordionAnatomy.keys);
 
@@ -157,6 +173,7 @@ export const theme = extendTheme({
     Accordion: accordionTheme,
     Input: inputTheme,
     Textarea: textareaTheme,
+    Button: buttonTheme,
   },
   fonts: {
     heading: `'minerva-modern', sans-serif`,

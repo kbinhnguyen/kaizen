@@ -20,7 +20,7 @@ export default function Investments() {
       </Head>
       <main>
         <Header />
-        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }}>
+        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="350px">
           <VStack
             w={{ base: '100%', md: '80%', lg: '50%' }}
             px={{ base: 10, md: 0 }}

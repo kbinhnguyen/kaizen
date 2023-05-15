@@ -48,7 +48,7 @@ export default function Footer() {
                   <Text w="100%" color="#C2D5ED" align="start">Privacy Policy</Text>
                 </GridItem>
               </Grid>
-              <Text alignSelf="center" color="#C2D5ED">&copy; 2023 Kaizen Capital Partners. All Rights Reserved.</Text>
+              <Text alignSelf="center" color="#C2D5ED" w="100%">&copy; 2023 Kaizen Capital Partners. All Rights Reserved.</Text>
             </>
           )}
         </Flex>

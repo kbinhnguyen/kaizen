@@ -38,7 +38,6 @@ export default function HeaderNavBar() {
         isOpen={isOpen}
         onClose={onClose}
         size="full"
-        minWidth="350px"
       >
         <DrawerOverlay />
         <DrawerContent>
