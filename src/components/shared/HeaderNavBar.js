@@ -42,14 +42,14 @@ export default function HeaderNavBar() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader pt={4} display="flex" direction="row" justifyContent="space-between" alignItems="center">
-              <Link as={NextLink} href="/">
-                <Box w="150px">
-                  <NextImage src={Logo} alt="kaizen-logo" />
-                </Box>
-              </Link>
-              <Box h="30px" w="30px" _hover={{ opacity: 0.6, cursor: 'pointer' }} onClick={() => onClose()} position="relative">
-                <NextImage src={CloseButton} alt="close-button" style={{ objectFit: 'contain' }} fill={true} />
+            <Link as={NextLink} href="/" _hover={{ boxShadow: 'none' }} _focus={{ boxShadow: 'none' }}>
+              <Box w="150px">
+                <NextImage src={Logo} alt="kaizen-logo" />
               </Box>
+            </Link>
+            <Box h="30px" w="30px" _hover={{ opacity: 0.6, cursor: 'pointer' }} onClick={() => onClose()} position="relative">
+              <NextImage src={CloseButton} alt="close-button" style={{ objectFit: 'contain' }} fill={true} />
+            </Box>
           </DrawerHeader>
           <DrawerBody>
             <Stack

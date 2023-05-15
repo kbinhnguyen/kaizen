@@ -113,7 +113,11 @@ const buttonTheme = defineStyleConfig({
       color: '#FFFFFF',
       px: 8,
       _disabled: {
-        opacity: 0.3,
+        opacity: 0.5,
+        _hover: {
+          bg: '#000000 !important',
+          color: '#FFFFFF !important',
+        }
       }
     }),
   }
@@ -153,6 +157,10 @@ const inputTheme = defineMultiStyleConfigInput({
         borderBottom: '1px solid',
         borderColor: '#5F5E5E',
         _focus: {
+          borderColor: 'black',
+          boxShadow: '0px 1px 0px 0px black'
+        },
+        _invalid: {
           borderColor: 'black',
           boxShadow: '0px 1px 0px 0px black'
         },

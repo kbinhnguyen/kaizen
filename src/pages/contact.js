@@ -1,8 +1,10 @@
+import { useState, useEffect } from 'react';
 import {
   Box, VStack, Heading, Text, Divider, Link, FormControl, FormLabel, FormErrorMessage,
   FormHelperText, Input, Textarea, Grid, GridItem, Button,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
+import { useForm as useFormCarry } from '@formcarry/react';
 import NextLink from 'next/link';
 import Head from 'next/head';
 import Header from '../components/shared/Header';
@@ -12,12 +14,16 @@ const focusInputStyle = {
   p: { color: '#33647E' },
 };
 
-
 export default function Contact() {
-  const { handleSubmit, register, formState: { errors, isSubmitting, isValid } } = useForm();
-  const onSubmit = () => {
-    console.log('submitted');
-  };
+  const [submitted, setSubmitted] = useState(false);
+  const { register, formState: { errors, isSubmitting, isValid } } = useForm({ mode: 'onBlur' });
+  const { state, submit } = useFormCarry({ id: 'ksnjNLyvSu' });
+
+  useEffect(() => { if (errors) console.log(errors)}, [errors]);
+
+  useEffect(() => {
+    if (state.submitted) setSubmitted(true);
+  }, [state]);
 
   return (
     <>
@@ -30,8 +36,15 @@ export default function Contact() {
         <VStack pb={{ base: 12, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="350px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }} spacing={12}>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
-            <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
-            <FormControl isInvalid={errors.name} display="flex" flexDirection="column" w="100%">
+            {submitted && (
+              <Box w="100%">Thank you for your inquiry! We will be in touch with you soon!</Box>
+            )}
+            {!submitted && (
+            <form
+              style={{ width: '100%' }}
+              onSubmit={submit}
+            >
+            <FormControl isInvalid={errors} display="flex" flexDirection="column" w="100%">
               <Grid
                 w="100%"
                 templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
@@ -46,12 +59,26 @@ export default function Contact() {
                     <Input
                       w="100%"
                       id="firstName"
+                      name="firstName"
                       variant="flushed"
                       type="text"
                       {...register('firstName', {
-                        required: true,
+                        required: 'Required field',
+                        maxLength: {
+                          value: 50,
+                          message: 'Max 50 characters',
+                        },
+                        minLength: {
+                          value: 1,
+                          message: 'Min 1 character'
+                        }
                       })}
                     />
+                    {errors?.firstName && (
+                      <FormErrorMessage>
+                        {errors.firstName.message}
+                      </FormErrorMessage>
+                    )}
                   </FormLabel>
                 </GridItem>
                 <GridItem w="100%">
@@ -59,13 +86,27 @@ export default function Contact() {
                   <Text variant="formLabel">Last Name</Text>
                   <Input
                     id="lastName"
+                    name="lastName"
                     w="100%"
                     variant="flushed"
                     type="text"
                     {...register('lastName', {
-                      required: true,
+                      required: 'Required field',
+                      maxLength: {
+                        value: 50,
+                        message: 'Max 50 characters',
+                      },
+                      minLength: {
+                        value: 1,
+                        message: 'Min 1 character'
+                      }
                     })}
                   />
+                  {errors?.lastName && (
+                    <FormErrorMessage>
+                      {errors.lastName.message}
+                    </FormErrorMessage>
+                  )}
                   </FormLabel>
                 </GridItem>
                 <GridItem w="100%">
@@ -73,13 +114,27 @@ export default function Contact() {
                     <Text w="100%" variant="formLabel">Phone</Text>
                     <Input
                       id="phone"
+                      name="phone"
                       w="100%"
                       variant="flushed"
                       type="tel"
                       {...register('phone', {
-                        required: true,
+                        required: 'Required field',
+                        maxLength: {
+                          value: 20,
+                          message: 'Max 20 characters',
+                        },
+                        minLength: {
+                          value: 10,
+                          message: 'Min 10 characters'
+                        },
                       })}
                     />
+                    {errors?.phone && (
+                    <FormErrorMessage>
+                      {errors.phone.message}
+                    </FormErrorMessage>
+                    )}
                   </FormLabel>
                 </GridItem>
                 <GridItem w="100%">
@@ -87,13 +142,27 @@ export default function Contact() {
                     <Text w="100%" variant="formLabel">Email</Text>
                     <Input
                       id="email"
+                      name="email"
                       w="100%"
                       variant="flushed"
                       type="email"
                       {...register('email', {
-                        required: true,
+                        required: 'Required field',
+                        maxLength: {
+                          value: 50,
+                          message: 'Max 50 characters',
+                        },
+                        minLength: {
+                          value: 7,
+                          message: 'Min 7 characters'
+                        },
                       })}
                     />
+                    {errors?.email && (
+                    <FormErrorMessage>
+                      {errors.email.message}
+                    </FormErrorMessage>
+                    )}
                   </FormLabel>
                 </GridItem>
                 <GridItem gridColumn={{ md: '1 / 3'}} w="100%">
@@ -101,13 +170,27 @@ export default function Contact() {
                     <Text variant="formLabel" w="100%">Tell us about your inquiry</Text>
                     <Textarea
                       id="inquiry"
+                      name="inquiry"
                       w="100%"
                       variant="customTextarea"
                       mt={4}
                       {...register('inquiry', {
-                        required: true,
+                        required: 'Required field',
+                        maxLength: {
+                          value: 350,
+                          message: 'Max 350 characters',
+                        },
+                        minLength: {
+                          value: 10,
+                          message: 'Min 10 characters'
+                        },
                       })}
-                  />
+                    />
+                    {errors?.inquiry && (
+                    <FormErrorMessage>
+                      {errors.inquiry.message}
+                    </FormErrorMessage>
+                    )}
                   </FormLabel>
                 </GridItem>
               </Grid>
@@ -122,7 +205,7 @@ export default function Contact() {
             >
               Submit
             </Button>
-          </form>
+          </form>)}
           </VStack>
         </VStack>
         <Footer />

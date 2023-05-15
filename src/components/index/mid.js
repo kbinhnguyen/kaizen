@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Heading, Grid, GridItem, Text, Icon, Button, Link, Box, Stack,
 } from '@chakra-ui/react';
@@ -17,23 +17,32 @@ const CircleIcon = (props) => (
   </Icon>
 );
 
-const sections = {
-    'Investments': {
-    description: 'Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.',
-    link: '/investments',
-  },
-  'Consulting': {
-    description: 'Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.',
-    link: '/consulting',
-  },
-  'Investors': {
-    description: 'Our investors serve as a great source for industry perspective, offer a network of relationships, and where appropriate, serve as board members and advisors to portfolio companies. We seek investors who are passionate about free enterprise and want to help small business entrepreneurs grow and prosper.',
-    link: '/investor',
-  }
+const investments = {
+  name: 'Investments',
+  description: 'Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.',
+  link: '/investments',
 };
 
+const consulting = {
+  name: 'Consulting',
+  description: 'Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.',
+  link: '/consulting',
+};
+
+const investors = {
+  name: 'Investors',
+  description: 'Our investors serve as a great source for industry perspective, offer a network of relationships, and where appropriate, serve as board members and advisors to portfolio companies. We seek investors who are passionate about free enterprise and want to help small business entrepreneurs grow and prosper.',
+  link: '/investor',
+};
+
+const sections = [investments, consulting, investors];
+
 export default function MidPanel() {
-  const [section, setSection] = useState('Investments');
+  const [section, setSection] = useState(0);
+
+  // useEffect(() => {
+  //   setTimeout(() => setSection((section + 1) % 3), 5000);
+  // }, [section]);
 
   return (
   <>
@@ -100,20 +109,20 @@ export default function MidPanel() {
         >
           <Stack w="max-content" spacing={1} direction={{ base:'row', md: 'column' }} pt={{ md: 32, lg: 20 }}>
             <CircleIcon
-              color={section == 'Investments' ? '#33647E' : '#DCE3EB'}
-              onClick={() => setSection('Investments')}
+              color={section == 0 ? '#33647E' : '#DCE3EB'}
+              onClick={() => setSection(0)}
             />
             <CircleIcon
-              color={section == 'Consulting' ? '#33647E' : '#DCE3EB'}
-              onClick={() => setSection('Consulting')}
+              color={section == 1 ? '#33647E' : '#DCE3EB'}
+              onClick={() => setSection(1)}
             />
             <CircleIcon
-              color={section == 'Investors' ? '#33647E' : '#DCE3EB'}
-              onClick={() => setSection('Investors')}
+              color={section == 2 ? '#33647E' : '#DCE3EB'}
+              onClick={() => setSection(2)}
             />
           </Stack>
           <Stack spacing={{ base: 2, md: 4 }} direction="column">
-            <Heading variant="pageName" as="h3" w="100%">{section}</Heading>
+            <Heading variant="pageName" as="h3" w="100%">{sections[section].name}</Heading>
             <Text>{sections[section].description}</Text>
             <Box w="100%" pt={{ base: 2, md: 0 }}>
               <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
