@@ -161,8 +161,9 @@ const inputTheme = defineMultiStyleConfigInput({
           boxShadow: '0px 1px 0px 0px black'
         },
         _invalid: {
-          borderColor: 'black',
-          boxShadow: '0px 1px 0px 0px black'
+          borderBottom: '1px solid',
+          borderColor: '#5F5E5E',
+          boxShadow: 'none',
         },
         fontFamily: `'proxima-nova', sans-serif`,
         fontSize: { base: '16px', sm:'18px', md: '20px' },
