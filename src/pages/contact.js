@@ -1,6 +1,6 @@
 import {
   Box, VStack, Heading, Text, Divider, Link, FormControl, FormLabel, FormErrorMessage,
-  FormHelperText, Input, Textarea,
+  FormHelperText, Input, Textarea, Grid, GridItem, Button,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import NextLink from 'next/link';
@@ -28,46 +28,69 @@ export default function Contact() {
           </VStack>
           <form onSubmit={handleSubmit(onSubmit)} w="100%">
             <FormControl isInvalid={errors.name}>
-              <FormLabel htmlFor="firstName">First Name</FormLabel>
-              <Input
-                id="firstName"
-                type="text"
-                {...register('firstName', {
-                  required: true,
-                })}
-              />
-              <FormLabel htmlFor="lastName">Last Name</FormLabel>
-              <Input
-                id="lastName"
-                type="text"
-                {...register('lastName', {
-                  required: true,
-                })}
-              />
-              <FormLabel htmlFor="phone">Phone</FormLabel>
-              <Input
-                id="phone"
-                type="tel"
-                {...register('phone', {
-                  required: true,
-                })}
-              />
-              <FormLabel htmlFor="phone">Email</FormLabel>
-              <Input
-                id="email"
-                type="email"
-                {...register('email', {
-                  required: true,
-                })}
-              />
-              <FormLabel htmlFor="inquiry">Tell us about your inquiry</FormLabel>
-              <Textarea
-                id="inquiry"
-                {...register('inquiry', {
-                  required: true,
-                })}
-              />
+              <Grid
+                w="100%"
+                templateColumns='repeat(2, 1fr)'
+                templateRows='repeat(3, max-content)'
+                gap={4}
+              >
+                <GridItem>
+                  <FormLabel htmlFor="firstName">First Name</FormLabel>
+                  <Input
+                    id="firstName"
+                    variant="flushed"
+                    type="text"
+                    {...register('firstName', {
+                      required: true,
+                    })}
+                  />
+                </GridItem>
+                <GridItem>
+                  <FormLabel htmlFor="lastName">Last Name</FormLabel>
+                  <Input
+                    id="lastName"
+                    variant="flushed"
+                    type="text"
+                    {...register('lastName', {
+                      required: true,
+                    })}
+                  />
+                </GridItem>
+                <GridItem>
+                  <FormLabel htmlFor="phone">Phone</FormLabel>
+                  <Input
+                    id="phone"
+                    variant="flushed"
+                    type="tel"
+                    {...register('phone', {
+                      required: true,
+                    })}
+                  />
+                </GridItem>
+                <GridItem>
+                  <FormLabel htmlFor="phone">Email</FormLabel>
+                  <Input
+                    id="email"
+                    variant="flushed"
+                    type="email"
+                    {...register('email', {
+                      required: true,
+                    })}
+                  />
+                </GridItem>
+                <GridItem gridColumn='1 / 3'>
+                  <FormLabel htmlFor="inquiry">Tell us about your inquiry</FormLabel>
+                  <Textarea
+                    id="inquiry"
+                    {...register('inquiry', {
+                      required: true,
+                    })}
+                  />
+                </GridItem>
+              </Grid>
+              <FormHelperText>* All fields required to submit contact form</FormHelperText>
             </FormControl>
+            <Button type="submit" isLoading={isSubmitting}>Submit</Button>
           </form>
         </VStack>
         <Footer />
