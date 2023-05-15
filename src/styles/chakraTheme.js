@@ -50,9 +50,16 @@ const linkTheme = defineStyleConfig({
     topNavBar: {
       fontFamily: `'Roboto', sans-serif`,
       color: '#00263E',
+      textTransform: 'uppercase',
+    },
+    mobileNavBar: {
+      fontFamily: `'Open Sans', sans-serif`,
+      fontWeight: 600,
+      color: '#00263E',
     },
     bottomNavBar: {
       color: '#C2D5ED',
+      textTransform: 'uppercase',
     }
   }
 });
