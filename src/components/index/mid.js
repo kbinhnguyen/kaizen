@@ -122,13 +122,13 @@ export default function MidPanel() {
               onClick={() => setSection(2)}
             />
           </Stack>
-            <Stack key={section} spacing={{ base: 2, md: 4 }} direction="column" className="fadeIn">
-              <Heading variant="pageName" as="h3" w="100%">{sections[section].name}</Heading>
-              <Text>{sections[section].description}</Text>
-              <Box w="100%" pt={{ base: 2, md: 0 }}>
-                <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
-              </Box>
-            </Stack>
+          <Stack key={section} spacing={{ base: 2, md: 4 }} direction="column" className="fadeIn">
+            <Heading variant="pageName" as="h3" w="100%">{sections[section].name}</Heading>
+            <Text>{sections[section].description}</Text>
+            <Box w="100%" pt={{ base: 2, md: 0 }}>
+              <Link variant="learnMore" w="max-content" as={NextLink} href={sections[section].link}>Learn More</Link>
+            </Box>
+          </Stack>
         </Stack>
       </GridItem>
     </Grid>

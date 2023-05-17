@@ -1,11 +1,8 @@
 .fadeIn {
-  /* opacity: 1; */
   animation-name: fadeIn;
-  /* animation-iteration-count: infinite; */
   transition: opacity 1s ease-in-out;
   animation-timing-function: ease-in-out;
   animation-duration: 2s;
-  /* transition-delay: 1s; */
 }
 
 @keyframes fadeIn {
