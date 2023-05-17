@@ -1,15 +1,15 @@
-.fadeInOut {
+.fadeIn {
   /* opacity: 1; */
-  animation-name: fade;
+  animation-name: fadeIn;
   /* animation-iteration-count: infinite; */
   transition: opacity 1s ease-in-out;
   animation-timing-function: ease-in-out;
-  animation-duration: 5s;
+  animation-duration: 2s;
   /* transition-delay: 1s; */
 }
 
-@keyframes fade {
+@keyframes fadeIn {
   0% { opacity: 0 }
-  50% { opacity: 1 }
-  100% { opacity: 0 }
+  50% { opacity: 0.5 }
+  100% { opacity: 1 }
 }
