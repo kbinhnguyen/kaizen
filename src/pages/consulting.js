@@ -1,5 +1,5 @@
-
-import { Box, VStack, Heading, Text } from '@chakra-ui/react';
+import { useEffect, useRef } from 'react';
+import { Box, VStack, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import Head from 'next/head';
 import Header from '../components/shared/Header';
@@ -7,6 +7,12 @@ import Footer from '../components/shared/Footer';
 import Img from '../../public/AdobeStock_252906008.jpeg';
 
 export default function Consulting() {
+  const expandRef = useRef(null);
+  const isDesktop = useBreakpointValue({ md: true, base: false });
+
+  useEffect(() => {
+    expandRef.current.style.height = isDesktop ? '105%' : '95%';
+  }, [isDesktop, expandRef]);
 
   return (
     <>
@@ -32,11 +38,13 @@ export default function Consulting() {
             <Box
               position="absolute"
               w={{ base: '35%', md: '40%' }}
-              h={{ base: '90%', md: '100%' }}
+              h={0}
               right={{ base: 32, md: 40 }}
               top={{ base: '5%', md: 0 }}
               zIndex="-30"
               bg="#DCE3EB"
+              ref={expandRef}
+              className="expandDown"
             ></Box>
             <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Knowledge & Expertise</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Consulting</Heading>

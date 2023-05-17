@@ -1,5 +1,7 @@
+import { useEffect, useRef } from 'react';
 import {
   Box, VStack, Heading, Text, Divider, List, ListItem, Grid, GridItem, Link, HStack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
@@ -12,6 +14,13 @@ import PlusIcon from '../../public/plus_round_icon.svg';
 import MinusIcon from '../../public/minus_round_icon.svg';
 
 export default function Investments() {
+  const expandRef = useRef(null);
+  const isDesktop = useBreakpointValue({ md: true, base: false });
+
+  useEffect(() => {
+    expandRef.current.style.height = isDesktop ? '100%' : '95%';
+  }, [isDesktop, expandRef]);
+
   return (
     <>
       <Head>
@@ -31,12 +40,14 @@ export default function Investments() {
           >
             <Box
               position="absolute"
-              w={{ base: '35%', md: '40%' }}
-              h={{ base: '95%', md: '100%' }}
-              right={{ base: 32, md: 40 }}
+              w={{ base: '35%', md: '35%' }}
+              h={0}
+              right={{ base: 32, md: 60 }}
               top={{ base: '3%', md: 0 }}
               zIndex="-30"
               bg="#DCE3EB"
+              ref={expandRef}
+              className="expandDown"
             ></Box>
             <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Building Relationships</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Investments</Heading>
