@@ -13,19 +13,19 @@ import DavisImg from '../../public/Joe_Davis.jpeg';
 
 const ohara = {
   name: "Joseph M. O'Hara",
-  title: 'Managing Partner',
+  title: 'Partner',
   linkedIn: 'https://www.linkedin.com/in/jmohara/',
   img: OharaImg,
 };
 
 const davis = {
   name: 'Joseph W. Davis',
-  title: 'Partner',
+  title: 'Managing Partner',
   linkedIn: 'https://www.linkedin.com/in/joe-davis-8a44b820/',
   img: DavisImg,
 };
 
-const staff = [ohara, davis];
+const staff = [davis, ohara];
 
 const LIIcon = () => (
   <Box w="25px" h="25px" position="relative" m={0}>
