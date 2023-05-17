@@ -20,28 +20,37 @@ export default function Investments() {
       </Head>
       <main>
         <Header />
-        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="350px">
+        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 0, md: 6 }} minWidth="350px">
           <VStack
-            w={{ base: '100%', md: '80%', lg: '50%' }}
+            w={{ base: '100%', md: '85%', lg: '60%' }}
             px={{ base: 10, md: 0 }}
             spacing={{ base: 0, md: 4 }}
-            py={10}
+            pt={12}
+            pb={{ base: 12, md: 12 }}
             position="relative"
           >
             <Box
               position="absolute"
               w={{ base: '35%', md: '40%' }}
-              h={{ base: '90%', md: '100%' }}
+              h={{ base: '95%', md: '100%' }}
               right={{ base: 32, md: 40 }}
-              top={{ base: '5%', md: 0 }}
+              top={{ base: '3%', md: 0 }}
               zIndex="-30"
               bg="#DCE3EB"
             ></Box>
             <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Building Relationships</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Investments</Heading>
-            <Text w="83%" color="#656565" pt={{ base: 2, md: 8 }} textAlign="justify">
+            <Text w={{ base: '85%', md: '67%' }} color="#656565" pt={{ base: 2, md: 8 }} pb={8} textAlign="justify">
               Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
             </Text>
+            <VStack w="100%" spacing={{ base: 4, md: 8 }}>
+              <Text>
+                We don’t just lend money; we partner with people and work with them to attain their goals and objectives through business. While we often invest financial resources, we also provide independent insights, governance, and management consulting rooted in decades of experience.
+              </Text>
+              <Text>
+                Our investment partners are a diverse group, yet they all share a common vision for the opportunities of small business. We talk about “the three C’s”:
+              </Text>
+            </VStack>
           </VStack>
           <VStack
             w={{ base: '100%', md: '85%', lg: '60%' }}
@@ -50,12 +59,6 @@ export default function Investments() {
             display="flex"
             textAlign="justify"
           >
-            <Text>
-              We don’t just lend money; we partner with people and work with them to attain their goals and objectives through business. While we often invest financial resources, we also provide independent insights, governance, and management consulting rooted in decades of experience.
-            </Text>
-            <Text>
-              Our investment partners are a diverse group, yet they all share a common vision for the opportunities of small business. We talk about “the three C’s”:
-            </Text>
             <List
               w={{ base: '100%', md: '75%' }}
               spacing={{ base: 6, sm: 8, md: 12 }}
