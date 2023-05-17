@@ -23,7 +23,7 @@ export default function HeaderNavBar() {
         align="center"
       >
         {menu.map(({ item, href }) => (
-           <Link key={item} variant="topNavBar" as={NextLink} href={href}>{item}</Link>
+           <Link className="topNavBar" key={item} variant="topNavBar" as={NextLink} href={href}>{item}</Link>
         ))}
       </Stack>
     );

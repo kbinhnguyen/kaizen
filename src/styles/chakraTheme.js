@@ -51,6 +51,10 @@ const linkTheme = defineStyleConfig({
       fontFamily: `'Roboto', sans-serif`,
       color: '#00263E',
       textTransform: 'uppercase',
+      _hover: {
+        textDecoration: 'none',
+        opacity: 1,
+      }
     },
     mobileNavBar: {
       fontFamily: `'Open Sans', sans-serif`,
