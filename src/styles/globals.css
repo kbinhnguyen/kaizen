@@ -25,3 +25,56 @@
 .expandDown {
   transition: height 0.3s ease-in-out;
 }
+
+.fontMoveUp {
+  animation-name: wordsMoveUp;
+}
+
+@keyframes wordsMoveUp {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fontMoveRight {
+  animation-name: wordsMoveRight;
+}
+
+.fontMoveLeft {
+  animation-name: wordsMoveLeft;
+}
+
+.fontTransition {
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s
+}
+
+@keyframes wordsMoveLeft {
+  0% {
+    transform: translateX(5%);
+  }
+  50% {
+    transform: translateX(3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wordsMoveRight {
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

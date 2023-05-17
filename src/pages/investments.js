@@ -49,8 +49,8 @@ export default function Investments() {
               ref={expandRef}
               className="expandDown"
             ></Box>
-            <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2">Building Relationships</Heading>
-            <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Investments</Heading>
+            <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2" className="fontMoveUp fontTransition">Building Relationships</Heading>
+            <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveUp fontTransition">Investments</Heading>
             <Text w={{ base: '85%', md: '67%' }} color="#656565" pt={{ base: 2, md: 8 }} pb={8} textAlign="justify">
               Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
             </Text>
