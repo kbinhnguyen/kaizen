@@ -27,9 +27,9 @@ export default function Investors() {
             <Text pt={{ base: 0, md: 2 }} alignSelf="start" w="max-content">7086 Corporate Way<br />Dayton, OH 45459-4294</Text>
             <VStack pt={{ base: 0, md: 2 }} spacing={0} w="100%">
               <Text alignSelf="start">
-                E: <Link as={NextLink} href="mailto:johara@cybeck.com">johara@cybeck.com</Link>
+                E: <Link as={NextLink} href="mailto:jdavis@kaizen-cp.com">jdavis@kaizen-cp.com</Link>
               </Text>
-              <Text alignSelf="start">T: (937) 291-1900 ext. 256</Text>
+              <Text alignSelf="start">T: (937) 696-8006</Text>
             </VStack>
           </VStack>
         </VStack>

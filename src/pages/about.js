@@ -16,6 +16,8 @@ const ohara = {
   title: 'Partner',
   linkedIn: 'https://www.linkedin.com/in/jmohara/',
   img: OharaImg,
+  email: 'johara@kaizen-cp.com',
+  ext: 702,
 };
 
 const davis = {
@@ -23,6 +25,8 @@ const davis = {
   title: 'Managing Partner',
   linkedIn: 'https://www.linkedin.com/in/joe-davis-8a44b820/',
   img: DavisImg,
+  email: 'jdavis@kaizen-cp.com',
+  ext: 701,
 };
 
 const staff = [davis, ohara];
@@ -69,7 +73,7 @@ export default function About() {
                 style={{objectFit: 'cover'}}
                 fill={true}
                 src={Img}
-                alt="image"
+                alt="stairs"
               />
             </Box>
             <VStack spacing={6} py={{ base: 2, md: 4 }}>
@@ -155,7 +159,7 @@ export default function About() {
               templateRows={{ base: 'repeat(2, max-content)', md: 'repeat(1, max-content)' }}
               templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
             >
-              {staff.map(({ name, title, img, linkedIn }) => (
+              {staff.map(({ name, title, img, linkedIn, email, ext }) => (
                 <GridItem key={name}>
                   <VStack spacing={2}>
                     <Box w="100%" h="450px" position="relative">
@@ -184,6 +188,10 @@ export default function About() {
                         </Box>
                       </Link>
                     </HStack>
+                    <Text alignSelf="start" fontSize={{ base: '14px', md: '16px' }}>
+                      E: <Link as={NextLink} href={`mailto:${email}`} fontSize={{ base: '15px', md: '16px' }}>{email}</Link>
+                    </Text>
+                    <Text alignSelf="start" fontSize={{ base: '14px', md: '16px' }}>T: (937) 696-8006 ext. {ext}</Text>
                   </VStack>
                 </GridItem>
               ))}
