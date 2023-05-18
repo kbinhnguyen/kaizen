@@ -21,7 +21,12 @@ export default function TopPanel() {
     <div style={style(isDesktop)}>
       <Header />
       <Box w={{ base: '85%', lg: '50%' }} pt={{ base: '10%', md: '5%' }} pl={{ base: 10, md: '10%'}}>
-        <Heading as="h2" variant="tagline">Investing in and building business relationships with people who share our values.</Heading>
+        <Heading
+          as="h2"
+          variant="tagline"
+        >
+          Investing in and building business relationships with people who share our values.
+        </Heading>
       </Box>
     </div>
   </>)

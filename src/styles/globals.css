@@ -23,58 +23,82 @@
 }
 
 .expandDown {
-  transition: height 0.3s ease-in-out;
+    transition: height 0.7s ease-in-out;
 }
 
 .fontMoveUp {
-  animation-name: wordsMoveUp;
+    animation-name: wordsMoveUp;
 }
 
 @keyframes wordsMoveUp {
-  0% {
-    transform: translateY(10%);
-  }
-  50% {
-    transform: translateY(5%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+      transform: translateY(10%);
+    }
+    50% {
+      transform: translateY(5%);
+    }
+    100% {
+      transform: translateY(0);
+    }
 }
 
 .fontMoveRight {
-  animation-name: wordsMoveRight;
+    animation-name: wordsMoveRight;
 }
 
 .fontMoveLeft {
-  animation-name: wordsMoveLeft;
+    animation-name: wordsMoveLeft;
 }
 
 .fontTransition {
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s
 }
 
 @keyframes wordsMoveLeft {
-  0% {
-    transform: translateX(5%);
-  }
-  50% {
-    transform: translateX(3%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+      transform: translateX(5%);
+    }
+    50% {
+      transform: translateX(3%);
+    }
+    100% {
+      transform: translateX(0);
+    }
 }
 
 @keyframes wordsMoveRight {
-  0% {
-    transform: translateX(-5%);
-  }
-  50% {
-    transform: translateX(-3%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+      transform: translateX(-5%);
+    }
+    50% {
+      transform: translateX(-3%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.scrollFont {
+    animation-name: scrollingFont;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes scrollingFont {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    30% {
+      transform: scale(1.01) translate(-0.05%, -3%);
+    }
+    60% {
+      transform: scale(1.02) translate(-0.1%, -5%);
+    }
+    80% {
+      transform: scale(1.01) translate(0.05%, 1%);
+    }
+    100% {
+      transform: scale(1) translate(0, 0);
+    }
 }
