@@ -29,9 +29,9 @@ export default function Contact() {
         <title>Kaizen | Contact Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Header />
       <main>
-        <Header />
-        <VStack pb={{ base: 12, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="350px">
+        <VStack pb={{ base: 12, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="320px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }} spacing={12}>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
             {submitted && (
@@ -210,8 +210,8 @@ export default function Contact() {
           </form>)}
           </VStack>
         </VStack>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

@@ -4,8 +4,8 @@ import {
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import FirstImg from '../../../public/AdobeStock_52149427.jpeg';
-import SecondImg from '../../../public/AdobeStock_7179061.jpeg';
+import FirstImg from '../../../public/AdobeStock_52149427_resized.jpeg';
+import SecondImg from '../../../public/AdobeStock_7179061_resized.jpeg';
 
 
 const CircleIcon = (props) => (
@@ -39,29 +39,11 @@ const sections = [investments, consulting, investors];
 
 export default function MidPanel() {
   const [section, setSection] = useState(0);
-  const [scrollTop, setScrollTop] = useState(0);
-  const [transform, setTransform] = useState(false);
-  const gridRef = useRef(null);
-
-  const handleScroll = (e) => {
-    setScrollTop(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }), [];
 
   useEffect(() => {
     const timeOutId = setTimeout(() => setSection((section + 1) % 3), 5000);
     return () => clearTimeout(timeOutId);
   }, [section]);
-
-
-  useEffect(() => {
-    const { top: gridTop } = gridRef.current.getBoundingClientRect();
-    if (scrollTop > gridTop && !transform) setTransform(true);
-  }, [scrollTop, transform]);
 
   return (
   <>
@@ -72,13 +54,11 @@ export default function MidPanel() {
       templateRows={{ base: 'repeat(4, max-content)', md: 'repeat(2, 1fr)'}}
       templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
     >
-      <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ base: 10, lg: 20 }} onScroll={handleScroll}>
+      <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ base: 10, lg: 20 }}>
         <Stack
           spacing={{ base: 2, md: 6 }}
           pt={{ base: 12, md: 44 }}
           direction="column"
-          className={transform ? 'scrollFont' : ''}
-          ref={gridRef}
         >
           <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '16px', sm: '18px', md: '20px' }}>OUR APPROACH</Heading>
           <Heading fontSize={{ base: '32px', sm: '36px', md: '48px'}} as="h2" w="100%">Plan for tomorrow. Today.</Heading>

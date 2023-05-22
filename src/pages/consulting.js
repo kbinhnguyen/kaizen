@@ -4,7 +4,7 @@ import NextImage from 'next/image';
 import Head from 'next/head';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import Img from '../../public/AdobeStock_252906008.jpeg';
+import Img from '../../public/AdobeStock_252906008_resized.jpeg';
 
 export default function Consulting() {
   const expandRef = useRef(null);
@@ -20,13 +20,13 @@ export default function Consulting() {
         <title>Kaizen | Consulting</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Header />
       <main>
-        <Header />
         <VStack
           pb={{ base: 12, sm: 20, md: 28, lg: 40}}
           w="100vw" h="max-content"
           spacing={{ base: 8, md: 16 }}
-          minWidth="350px"
+          minWidth="320px"
         >
           <VStack
             w={{ base: '100%', md: '80%', lg: '50%' }}
@@ -119,13 +119,15 @@ export default function Consulting() {
                 style={{objectFit: 'cover'}}
                 fill={true}
                 src={Img}
-                alt="hill-top"
+                alt=""
+                priority={true}
+                quality={50}
               />
             </Box>
           </VStack>
         </VStack>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };

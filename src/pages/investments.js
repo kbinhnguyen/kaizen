@@ -8,7 +8,7 @@ import NextLink from 'next/link';
 import Head from 'next/head';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import Img from '../../public/AdobeStock_51349670.jpeg';
+import Img from '../../public/AdobeStock_51349670_resized.jpeg';
 import CustomAccordion from '../components/investments/CustomAccordion';
 import PlusIcon from '../../public/plus_round_icon.svg';
 import MinusIcon from '../../public/minus_round_icon.svg';
@@ -27,9 +27,9 @@ export default function Investments() {
         <title>Kaizen | Investments</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Header />
       <main>
-        <Header />
-        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 0, md: 6 }} minWidth="350px">
+        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 0, md: 6 }} minWidth="320px">
           <VStack
             w={{ base: '100%', md: '85%', lg: '60%' }}
             px={{ base: 10, md: 0 }}
@@ -54,7 +54,7 @@ export default function Investments() {
             <Text w={{ base: '85%', md: '67%' }} color="#656565" pt={{ base: 2, md: 8 }} pb={8} textAlign="justify">
               Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
             </Text>
-            <VStack w="100%" spacing={{ base: 4, md: 8 }}>
+            <VStack w="100%" spacing={{ base: 4, md: 8 }} textAlign="justify">
               <Text>
                 We don’t just lend money; we partner with people and work with them to attain their goals and objectives through business. While we often invest financial resources, we also provide independent insights, governance, and management consulting rooted in decades of experience.
               </Text>
@@ -183,7 +183,9 @@ export default function Investments() {
                 style={{objectFit: 'cover'}}
                 fill={true}
                 src={Img}
-                alt="buildings"
+                priority={true}
+                alt=""
+                quality={50}
               />
             </Box>
             <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start" pt={4}>BUSINESS FUNDING</Text>
@@ -193,8 +195,8 @@ export default function Investments() {
             <CustomAccordion />
           </VStack>
         </VStack>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

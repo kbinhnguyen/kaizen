@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 import Head from 'next/head';
 import Header from '../components/shared/Header';
 import Footer from '../components/shared/Footer';
-import Img from '../../public/AdobeStock_514819294.jpeg';
+import Img from '../../public/AdobeStock_514819294_resized.jpeg';
 import LinkedInIcon from '../../public/LI-In-Bug.png';
 import OharaImg from '../../public/Joe_OHara.jpeg';
 import DavisImg from '../../public/Joe_Davis.jpeg';
@@ -50,9 +50,9 @@ export default function About() {
         <title>Kaizen | About Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Header />
       <main>
-        <Header />
-        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }} minWidth="350px">
+        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }} minWidth="320px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 0, md: 4 }} px={{ base: 10, md: 0 }}>
             <Heading w="100%" pl={{ base: 12, sm: 24, md: 48 }} as="h2" className="fontMoveLeft fontTransition">About</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveRight fontTransition">Kaizen</Heading>
@@ -73,7 +73,9 @@ export default function About() {
                 style={{objectFit: 'cover'}}
                 fill={true}
                 src={Img}
-                alt="stairs"
+                alt=""
+                priority={true}
+                quality={50}
               />
             </Box>
             <VStack spacing={6} py={{ base: 2, md: 4 }}>
@@ -198,8 +200,8 @@ export default function About() {
             </Grid>
           </VStack>
         </VStack>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };

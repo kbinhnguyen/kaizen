@@ -1,7 +1,7 @@
 .fadeIn {
     animation-name: fadeIn;
     animation-timing-function: ease-in-out;
-    animation-duration: 2s;
+    animation-duration: 0.7s;
 }
 
 @keyframes fadeIn {
@@ -76,29 +76,5 @@
     }
     100% {
       transform: translateX(0);
-    }
-}
-
-.scrollFont {
-    animation-name: scrollingFont;
-    animation-duration: 1.2s;
-    animation-timing-function: ease-in;
-}
-
-@keyframes scrollingFont {
-    0% {
-      transform: scale(1) translate(0, 0);
-    }
-    30% {
-      transform: scale(1.01) translate(-0.05%, -3%);
-    }
-    60% {
-      transform: scale(1.02) translate(-0.1%, -5%);
-    }
-    80% {
-      transform: scale(1.01) translate(0.05%, 1%);
-    }
-    100% {
-      transform: scale(1) translate(0, 0);
     }
 }
