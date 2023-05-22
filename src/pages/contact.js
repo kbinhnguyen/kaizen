@@ -35,7 +35,11 @@ export default function Contact() {
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }} spacing={12}>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
             {submitted && (
-              <Box w="100%">Thank you for your inquiry! We have received your submission and will be in touch with you shortly.</Box>
+              <Box w="100%">
+                <Text>
+                  Thank you for your inquiry! We have received your submission and will be in touch with you shortly.
+                </Text>
+              </Box>
             )}
             {!submitted && (
             <form
