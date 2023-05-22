@@ -121,7 +121,6 @@ export default function Consulting() {
                 src={Img}
                 alt=""
                 priority={true}
-                quality={50}
               />
             </Box>
           </VStack>

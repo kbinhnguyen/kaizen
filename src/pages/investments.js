@@ -185,7 +185,6 @@ export default function Investments() {
                 src={Img}
                 priority={true}
                 alt=""
-                quality={50}
               />
             </Box>
             <Text fontWeight="700" fontSize={{ base: '20px', sm: '22px', md: '24px' }} alignSelf="start" pt={4}>BUSINESS FUNDING</Text>

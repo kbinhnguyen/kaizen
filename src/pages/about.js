@@ -75,7 +75,6 @@ export default function About() {
                 src={Img}
                 alt=""
                 priority={true}
-                quality={50}
               />
             </Box>
             <VStack spacing={6} py={{ base: 2, md: 4 }}>
