@@ -7,28 +7,28 @@ import Logo from '../../../public/logo-group.png';
 import NavBar from './FooterNavBar';
 
 export default function Footer() {
-  const isDesktop = useBreakpointValue({ md: true, base: false });
+  const isDesktop = useBreakpointValue({ lg: true, base: false });
 
   return (
     <Flex
       direction="column"
       w="100vw"
-      h={{ base: 'max-content', md: '50vh' }}
-      minHeight={{ base: 'max-content', md: '380px' }}
+      h={{ base: 'max-content', lg: '50vh' }}
+      minHeight={{ base: 'max-content', lg: '380px' }}
       bg="#00263E"
       alignItems="center"
       justifyContent="center"
-      py={{ base: 8, md: 12 }}
-      px={{ base: 10, md: 20 }}
+      py={{ base: 8, lg: 12 }}
+      px={{ base: 10, lg: 20 }}
     >
-      <Box w="200px" pb={{ base: 8, md: 0 }}>
+      <Box w="200px" pb={{ base: 8, lg: 0 }}>
         <NextImage src={Logo} alt="kaizen-logo" />
       </Box>
       <Spacer />
       <VStack spacing={6} w="100%">
         <NavBar />
         <Divider />
-        <Flex w="100%" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
+        <Flex w="100%" justifyContent="space-between" direction={{ base: 'column', lg: 'row' }}>
           {isDesktop && (
             <>
               <Text color="#C2D5ED">&copy; 2023 Kaizen Capital Partners. All Rights Reserved.</Text>

@@ -36,7 +36,7 @@ const linkTheme = defineStyleConfig({
   baseStyle: {
     fontWeight: 400,
     fontSize: { base: '16px', sm: '18px', md: '20px' },
-    _hover: { opacity: 0.3 },
+    _hover: { opacity: 0.3, textDecoration: 'none' },
   },
   variants: {
     learnMore: {
@@ -124,6 +124,15 @@ const buttonTheme = defineStyleConfig({
         }
       }
     }),
+    bottomNavBar: {
+      color: '#C2D5ED',
+      textTransform: 'uppercase',
+      bg: 'transparent',
+      fontWeight: 400,
+      px: 0,
+      fontSize: { base: '16px', sm: '18px', md: '20px' },
+      _hover: { opacity: 0.3 },
+    }
   }
 });
 
