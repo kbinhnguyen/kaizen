@@ -19,6 +19,7 @@ export default function BottomPanel() {
       minHeight={{ base: 'max-content', md: '800px'}}
       templateRows={{ base: '500px 550px', md: '5fr 2fr'}}
       gap={{ base: 0, md: 14 }}
+      className="eleToWatch"
     >
       <GridItem w="100%" h="100%" style={style} display="flex" justifyContent="end">
         <VStack pr={{ base: 10, md: 20}} pt={{ base: 32, sm: 36, lg: 40 }} w={{ base: '65%', lg: '45%' }} spacing={8}>

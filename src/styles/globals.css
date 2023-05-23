@@ -4,6 +4,11 @@
     animation-duration: 0.7s;
 }
 
+.delayAnimation {
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
 @keyframes fadeIn {
     0% { opacity: 0 }
     50% { opacity: 0.5 }

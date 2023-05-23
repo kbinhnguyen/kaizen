@@ -18,7 +18,7 @@ export default function TopPanel() {
 
   return (
   <>
-    <div style={style(isDesktop)}>
+    <div style={style(isDesktop)} className="fadeIn">
       <Header />
       <Box w={{ base: '85%', lg: '50%' }} pt={{ base: '10%', md: '5%' }} pl={{ base: 10, md: '10%'}}>
         <Heading
