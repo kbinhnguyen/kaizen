@@ -48,7 +48,7 @@ export default function MidPanel() {
   return (
     <Grid
       w="100vw"
-      minHeight={{ base: 'max-content', md: '800px' }}
+      minHeight={{ base: 'max-content', md: '1600px' }}
       h={{ md: '200vh', base: 'max-content'}}
       templateRows={{ base: 'repeat(4, max-content)', md: 'repeat(2, 1fr)'}}
       templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
