@@ -57,13 +57,13 @@ export default function MidPanel() {
     >
       <GridItem w="100%" h="100%">
         <Grid
-          templateRows={{base: 'repeat(2, max-content)', lg: '1fr' }}
+          templateRows={{ base: 'repeat(2, max-content)', lg: '1fr' }}
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)'}}
           w="100%" h="100%"
           className="eleToWatch"
           gap={{ lg: 0, base: 6 }}
         >
-          <GridItem w="100%" pl={{ base: 10, lg: 20}} pr={{ base: 10, lg: 20 }}>
+          <GridItem w="100%" pl={{ base: 10, lg: 20 }} pr={{ base: 10, lg: 20 }}>
             <Stack
               spacing={{ base: 2, lg: 6 }}
               pt={{ base: 12, lg: 44 }}
@@ -77,17 +77,17 @@ export default function MidPanel() {
             </Stack>
           </GridItem>
           <GridItem
-            h={{base: '400px', lg: '100%' }}
-            mr={20}
-            ml={{ base: 20, lg: 0 }}
+            h={{ base: '300px', sm: '400px', lg: '100%' }}
+            mr={{ base: 12, sm: 16, lg: 20 }}
+            ml={{ base: 12, sm: 16, lg: 0 }}
             my={{ base: 4, lg: 0 }}
             pt={{ base: 0, lg: 6 }}
             display="flex"
             alignItems="center"
           >
-            <Box h={{base: '100%', lg: '95%'}} w="100%" position="relative">
+            <Box h={{ base: '100%', lg: '95%' }} w="100%" position="relative">
               <NextImage
-                style={{objectFit: 'cover'}}
+                style={{objectFit: 'cover' }}
                 fill={true}
                 src={FirstImg}
                 alt="high-rise-buildings"
@@ -104,16 +104,16 @@ export default function MidPanel() {
           gap={{ lg: 0, base: 6 }}
         >
           <GridItem
-            h={{base: '400px', lg: '100%' }}
-            ml={{ base: 20, lg: 20 }}
-            mr={{ base: 20, lg: 0 }}
+            h={{ base: '300px', sm: '400px', lg: '100%' }}
+            ml={{ base: 12, md: 16, lg: 20 }}
+            mr={{ base: 12, md: 16, lg: 0 }}
             my={{ base: 4, lg: 0 }}
             pb={{ base: 0, lg: 6 }}
             display="flex"
             alignItems="center"
             className="eleToWatch"
           >
-            <Box h={{base: '100%', lg: '95%'}} w="100%" position="relative">
+            <Box h={{ base: '100%', lg: '95%'}} w="100%" position="relative">
               <NextImage
                 style={{objectFit: 'cover'}}
                 fill={true}
