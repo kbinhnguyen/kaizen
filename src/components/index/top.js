@@ -1,8 +1,8 @@
-import { Heading, Flex, Box, useBreakpointValue } from '@chakra-ui/react';
+import { Heading, Flex, Box } from '@chakra-ui/react';
 import bg from '../../../public/AdobeStock_381853198_resized.jpeg';
 import Header from '../shared/Header';
 
-const style = (isDesktop) => ({
+const style = {
   height: 'max(100vh, 780px)',
   minHeight: '780px',
   width: '100vw',
@@ -11,13 +11,11 @@ const style = (isDesktop) => ({
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-});
+};
 
 export default function TopPanel() {
-  const isDesktop = useBreakpointValue({ md: true, base: false });
-
   return (
-    <div style={style(isDesktop)} className="fadeIn">
+    <div style={style} className="fadeIn">
       <Header />
       <Box w={{ base: '85%', lg: '50%' }} pt={{ base: '10%', md: '5%' }} pl={{ base: 10, md: '10%'}}>
         <Heading
