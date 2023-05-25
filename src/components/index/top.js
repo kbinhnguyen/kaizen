@@ -3,8 +3,8 @@ import bg from '../../../public/AdobeStock_381853198_resized.jpeg';
 import Header from '../shared/Header';
 
 const style = (isDesktop) => ({
-  height: isDesktop ? '100vh' : 'min(100vh, 800px)',
-  minHeight: isDesktop ? '800px' : '600px',
+  height: 'max(100vh, 780px)',
+  minHeight: '780px',
   width: '100vw',
   minWidth: '320px',
   backgroundImage: `url(${bg.src})`,
