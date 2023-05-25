@@ -6,6 +6,7 @@ import bg from '../../../public/AdobeStock_386588109.jpeg';
 
 const style = {
   height: '100%',
+  width: '100%',
   backgroundImage: `url(${bg.src})`,
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -23,7 +24,7 @@ export default function BottomPanel() {
       className="eleToWatch"
     >
       <GridItem w="100%" h="100%" style={style} display="flex" justifyContent="end">
-        <VStack pr={{ base: 10, md: 20}} pt={{ base: 32, sm: 36, lg: 40 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
+        <VStack mr={{ base: 10, md: 20}} pt={{ base: 32, sm: 36, lg: 40 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
             <Heading variant="tagline" as="h2">Permanent Capital allows us to be patient for long-term results.</Heading>
           <Box w="100%">
             <Link variant="learnMore" w="max-content" as={NextLink} href="/about">Learn More</Link>
@@ -34,7 +35,7 @@ export default function BottomPanel() {
         <Grid
           templateColumns={{ base: '1fr', md: '7fr repeat(3, 5fr)' }}
           templateRows={{ base: 'repeat(4, max-content)', md: '1fr' }}
-          gap={{ base: 8, md: 14 }}
+          gap={{ base: 8, lg: 14 }}
           pb={{ base: 8, md: 14 }}
         >
           <GridItem>
