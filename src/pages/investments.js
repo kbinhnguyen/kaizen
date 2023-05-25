@@ -33,7 +33,7 @@ export default function Investments() {
           <VStack
             w={{ base: '100%', md: '85%', lg: '60%' }}
             px={{ base: 10, md: 0 }}
-            spacing={{ base: 0, md: 4 }}
+            spacing={{ base: 2, md: 4 }}
             pt={12}
             pb={{ base: 12, md: 12 }}
             position="relative"

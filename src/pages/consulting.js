@@ -30,14 +30,14 @@ export default function Consulting() {
         >
           <VStack
             w={{ base: '100%', md: '80%', lg: '50%' }}
-            spacing={{ base: 0, md: 4 }}
+            spacing={{ base: 2, md: 4 }}
             px={{ base: 10, md: 0 }}
             py={10}
             position="relative"
           >
             <Box
               position="absolute"
-              w={{ base: '45%', sm: '38%', md: '35%' }}
+              w={{ base: '45%', sm: '40%', md: '35%', lg: '40%' }}
               h={0}
               right={{ base: 20, sm: 32, md: 40 }}
               top={{ base: '5%', md: 0 }}

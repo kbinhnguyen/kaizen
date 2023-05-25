@@ -14,7 +14,7 @@ export default function Investors() {
       <Header />
       <main>
         <VStack pt={6} pb={{ base: 12, md: 24 }} w="100vw" h="max-content" spacing={{ base: 8, md: 16 }} minWidth="280px">
-          <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 0, md: 4 }} px={{ base: 10, md: 0 }}>
+          <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 2, md: 4 }} px={{ base: 10, md: 0 }}>
             <Heading
               fontSize={{ base: '20px', sm: '30px' }}
               w={{ base: '85%', lg: '80%' }}
