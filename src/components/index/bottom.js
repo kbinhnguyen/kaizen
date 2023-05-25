@@ -1,4 +1,6 @@
-import { Grid, GridItem, VStack, Heading, Link, Text, Divider, Box } from '@chakra-ui/react';
+import {
+  Grid, GridItem, VStack, Heading, Link, Text, Divider, Box,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 import bg from '../../../public/AdobeStock_386588109.jpeg';
 
@@ -12,7 +14,6 @@ const style = {
 
 export default function BottomPanel() {
   return (
-  <>
     <Grid
       w="100vw"
       h={{ base: 'max-content', md: '100vh' }}
@@ -63,5 +64,5 @@ export default function BottomPanel() {
         </Grid>
       </GridItem>
     </Grid>
-  </>);
+  );
 }

@@ -46,14 +46,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preload" as="image" href="/_next/static/media/AdobeStock_381853198_resized.8c21bde9.jpeg" />
       </Head>
-      {/* <div id="watchTarget"> */}
       <main>
         <TopPanel />
         <MidPanel />
         <BottomPanel />
       </main>
       <Footer />
-      {/* </div> */}
     </>
   )
 }

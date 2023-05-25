@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Heading, Grid, GridItem, Text, Icon, Button, Link, Box, Stack,
 } from '@chakra-ui/react';
@@ -46,10 +46,9 @@ export default function MidPanel() {
   }, [section]);
 
   return (
-  <>
     <Grid
       w="100vw"
-      minHeight={{ base: 'max-content', md: '1600px' }}
+      minHeight={{ base: 'max-content', md: '800px' }}
       h={{ md: '200vh', base: 'max-content'}}
       templateRows={{ base: 'repeat(4, max-content)', md: 'repeat(2, 1fr)'}}
       templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
@@ -93,6 +92,7 @@ export default function MidPanel() {
         pb={{ base: 0, md: 6 }}
         display="flex"
         alignItems="center"
+        className="eleToWatch"
       >
         <Box h={{base: '100%', md: '95%'}} w="100%" position="relative">
           <NextImage
@@ -136,5 +136,5 @@ export default function MidPanel() {
         </Stack>
       </GridItem>
     </Grid>
-  </>)
+  )
 }

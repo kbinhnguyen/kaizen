@@ -3,7 +3,7 @@ import bg from '../../../public/AdobeStock_381853198_resized.jpeg';
 import Header from '../shared/Header';
 
 const style = (isDesktop) => ({
-  height: isDesktop ? '100vh' : '600px',
+  height: isDesktop ? '100vh' : 'min(100vh, 800px)',
   minHeight: isDesktop ? '800px' : '600px',
   width: '100vw',
   minWidth: '320px',
@@ -17,7 +17,6 @@ export default function TopPanel() {
   const isDesktop = useBreakpointValue({ md: true, base: false });
 
   return (
-  <>
     <div style={style(isDesktop)} className="fadeIn">
       <Header />
       <Box w={{ base: '85%', lg: '50%' }} pt={{ base: '10%', md: '5%' }} pl={{ base: 10, md: '10%'}}>
@@ -29,5 +28,5 @@ export default function TopPanel() {
         </Heading>
       </Box>
     </div>
-  </>)
+  );
 }
