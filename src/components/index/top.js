@@ -3,8 +3,9 @@ import bg from '../../../public/AdobeStock_381853198_resized.jpeg';
 import Header from '../shared/Header';
 
 const style = {
-  height: 'max(100vh, 780px)',
+  height: '100vh',
   minHeight: 'min(780px, 100vh)',
+  maxHeight: 'max(780px, 100vh)',
   width: '100vw',
   minWidth: '320px',
   backgroundImage: `url(${bg.src})`,
