@@ -4,7 +4,7 @@ import Header from '../shared/Header';
 
 const style = {
   height: 'max(100vh, 780px)',
-  minHeight: '780px',
+  minHeight: 'min(780px, 100vh)',
   width: '100vw',
   minWidth: '320px',
   backgroundImage: `url(${bg.src})`,

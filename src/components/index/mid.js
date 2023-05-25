@@ -53,11 +53,12 @@ export default function MidPanel() {
       templateRows={{ base: 'repeat(2, max-content)', md: 'repeat(2, 1fr)'}}
       templateColumns="1fr"
     >
-      <GridItem w="100%" h="100%" className="eleToWatch">
+      <GridItem w="100%" h="100%">
         <Grid
           templateRows={{base: 'repeat(2, max-content)', md: '1fr' }}
           templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)'}}
           w="100%" h="100%"
+          className="eleToWatch"
         >
           <GridItem w="100%" pl={{ base: 10, md: 20}} pr={{ base: 10, lg: 20 }}>
             <Stack

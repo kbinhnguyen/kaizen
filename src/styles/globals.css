@@ -1,3 +1,13 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .fadeIn {
     animation-name: fadeIn;
     animation-timing-function: ease-in-out;
