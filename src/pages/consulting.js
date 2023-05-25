@@ -26,7 +26,6 @@ export default function Consulting() {
           pb={{ base: 12, sm: 20, md: 28, lg: 40}}
           w="100vw" h="max-content"
           spacing={{ base: 8, md: 16 }}
-          minWidth="320px"
         >
           <VStack
             w={{ base: '100%', md: '80%', lg: '50%' }}
@@ -37,16 +36,16 @@ export default function Consulting() {
           >
             <Box
               position="absolute"
-              w={{ base: '35%', md: '40%' }}
+              w={{ base: '45%', sm: '38%', md: '35%' }}
               h={0}
-              right={{ base: 32, md: 40 }}
+              right={{ base: 20, sm: 32, md: 40 }}
               top={{ base: '5%', md: 0 }}
               zIndex="-30"
               bg="#DCE3EB"
               ref={expandRef}
               className="expandDown"
             ></Box>
-            <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 8, sm: 10, md: 14, lg: 16 }} as="h2" className="fontMoveUp fontTransition">Knowledge & Expertise</Heading>
+            <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 10, md: 14, lg: 16 }} as="h2" className="fontMoveUp fontTransition">Knowledge & Expertise</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveUp fontTransition">Consulting</Heading>
             <Text w={{ base: '85%', md: '80%' }}  color="#656565" pt={{ base: 2, md: 8 }} textAlign="justify">
               Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.
@@ -113,7 +112,10 @@ export default function Consulting() {
             <Box
               w="100%"
               px={{ base: 10, md: 0 }}
-              h={{ base: '35vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative"
+              h={{ base: '30vh', md: '75vh' }}
+              minHeight={{ base: '150px', md: '500px' }}
+              position="relative"
+              maxHeight="400px"
             >
               <NextImage
                 style={{objectFit: 'cover'}}

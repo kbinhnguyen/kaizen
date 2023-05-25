@@ -8,10 +8,15 @@ import NavBar from './HeaderNavBar';
 
 export default function Header() {
   return (
-    <Flex px={{ base: 10, md: 20 }} pt={{ base: 8, sm: 12, md: 16 }} w="100%">
+    <Flex
+      px={{ base: 10, md: 20 }}
+      pt={{ base: 8, sm: 12, md: 16 }}
+      w="100%"
+      pb={{ base: 4, md: 8, lg: 12 }}
+    >
       <Link
         id="logoSm"
-        w="200px"
+        w={{ base: '180px', md: '200px' }}
         as={NextLink}
         href="/"
         _hover={{ opacity: 1, transform: 'scale(1.05)', transition: '0.5s' }}

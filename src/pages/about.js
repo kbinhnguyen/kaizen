@@ -52,7 +52,7 @@ export default function About() {
       </Head>
       <Header />
       <main>
-        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }} minWidth="320px">
+        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }}>
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 0, md: 4 }} px={{ base: 10, md: 0 }}>
             <Heading w="100%" pl={{ base: 12, sm: 24, md: 48 }} as="h2" className="fontMoveLeft fontTransition">About</Heading>
             <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveRight fontTransition">Kaizen</Heading>
@@ -68,7 +68,12 @@ export default function About() {
             <Text>
               Kaizen Capital Partners is a resource for companies needing equity capital for transition and growth. We are a private investment firm seeking to help companies and their owners build value and provide exceptional returns for all stakeholders.
             </Text>
-            <Box w="100%" h={{ base: '35vh', md: '75vh' }} minHeight={{ base: '250px', md: '500px' }} position="relative">
+            <Box w="100%"
+              position="relative"
+              h={{ base: '30vh', md: '75vh' }}
+              minHeight={{ base: '150px', md: '500px' }}
+              maxHeight="400px"
+            >
               <NextImage
                 style={{objectFit: 'cover'}}
                 fill={true}
