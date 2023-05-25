@@ -62,6 +62,7 @@ export default function MidPanel() {
           w="100%" h="100%"
           className="eleToWatch"
           gap={{ lg: 0, base: 6 }}
+          opacity={0}
         >
           <GridItem w="100%" pl={{ base: 10, lg: 20 }} pr={{ base: 10, lg: 20 }}>
             <Stack
@@ -112,6 +113,7 @@ export default function MidPanel() {
             display="flex"
             alignItems="center"
             className="eleToWatch"
+            opacity={0}
           >
             <Box h={{ base: '100%', lg: '95%'}} w="100%" position="relative">
               <NextImage

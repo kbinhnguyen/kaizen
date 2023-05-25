@@ -19,7 +19,7 @@ export default function Home() {
     const observer = new IntersectionObserver(addClassName, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.0,
+      threshold: 0.05,
     });
 
     const changeOpacity = (target) => {

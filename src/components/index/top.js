@@ -4,8 +4,8 @@ import Header from '../shared/Header';
 
 const style = {
   height: '100vh',
-  minHeight: 'min(780px, 100vh)',
-  maxHeight: 'max(780px, 100vh)',
+  minHeight: 'min(800px, 100vh)',
+  maxHeight: 'max(800px, 100vh)',
   width: '100vw',
   minWidth: '320px',
   backgroundImage: `url(${bg.src})`,
