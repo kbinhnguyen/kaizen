@@ -20,6 +20,7 @@ export default function Footer() {
       justifyContent="center"
       py={{ base: 8, lg: 12 }}
       px={{ base: 10, lg: 20 }}
+      minWidth="280px"
     >
       <Box w="200px" pb={{ base: 8, lg: 0 }}>
         <NextImage src={Logo} alt="kaizen-logo" />

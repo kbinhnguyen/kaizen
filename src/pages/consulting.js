@@ -26,6 +26,7 @@ export default function Consulting() {
           pb={{ base: 12, sm: 20, md: 28, lg: 40}}
           w="100vw" h="max-content"
           spacing={{ base: 8, md: 16 }}
+          minWidth="280px"
         >
           <VStack
             w={{ base: '100%', md: '80%', lg: '50%' }}
@@ -45,8 +46,16 @@ export default function Consulting() {
               ref={expandRef}
               className="expandDown"
             ></Box>
-            <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 10, md: 14, lg: 16 }} as="h2" className="fontMoveUp fontTransition">Knowledge & Expertise</Heading>
-            <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveUp fontTransition">Consulting</Heading>
+            <Heading
+              w={{ base: '85%', lg: '80%' }}
+              pl={{ base: 8, sm: 14, md: 16 }}
+              as="h2"
+              className="fontMoveUp fontTransition"
+              fontSize={{ base: '20px', sm: '30px' }}
+            >
+              Knowledge & Expertise
+            </Heading>
+            <Heading as="h1" fontSize={{ base: '32px', sm: '46px', md: '64px' }} className="fontMoveUp fontTransition">Consulting</Heading>
             <Text w={{ base: '85%', md: '80%' }}  color="#656565" pt={{ base: 2, md: 8 }} textAlign="justify">
               Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.
             </Text>

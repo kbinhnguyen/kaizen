@@ -29,7 +29,7 @@ export default function Investments() {
       </Head>
       <Header />
       <main>
-        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 0, md: 6 }}>
+        <VStack pb={{ base: 8, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 0, md: 6 }} minWidth="280px">
           <VStack
             w={{ base: '100%', md: '85%', lg: '60%' }}
             px={{ base: 10, md: 0 }}
@@ -40,17 +40,25 @@ export default function Investments() {
           >
             <Box
               position="absolute"
-              w={{ base: '48%', sm: '40%', md: '35%' }}
+              w={{ base: '45%', sm: '40%', md: '35%' }}
               h={0}
-              right={{ base: 20, sm: 32, md: 60 }}
+              right={{ base: 20, sm: 32, md: 40, lg: 60 }}
               top={{ base: '3%', md: 0 }}
               zIndex="-30"
               bg="#DCE3EB"
               ref={expandRef}
               className="expandDown"
             ></Box>
-            <Heading w={{ base: '85%', lg: '80%' }} pl={{ base: 10, md: 14, lg: 16 }} as="h2" className="fontMoveUp fontTransition">Building Relationships</Heading>
-            <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveUp fontTransition">Investments</Heading>
+            <Heading
+              fontSize={{ base: '20px', sm: '30px' }}
+              w={{ base: '85%', lg: '80%' }}
+              pl={{ base: 6, sm: 10, md: 32 }}
+              as="h2"
+              className="fontMoveUp fontTransition"
+            >
+              Building Relationships
+            </Heading>
+            <Heading as="h1" fontSize={{ base: '32px', sm: '46px', md: '64px' }} className="fontMoveUp fontTransition">Investments</Heading>
             <Text w={{ base: '85%', md: '67%' }} color="#656565" pt={{ base: 2, md: 8 }} pb={8} textAlign="justify">
               Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
             </Text>

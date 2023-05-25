@@ -52,10 +52,10 @@ export default function About() {
       </Head>
       <Header />
       <main>
-        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }}>
+        <VStack pt={6} pb={{ base: 16, md: 20 }} w="100vw" h="max-content" spacing={{ base: 4, md: 12 }} minWidth="280px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} spacing={{ base: 0, md: 4 }} px={{ base: 10, md: 0 }}>
-            <Heading w="100%" pl={{ base: 12, sm: 24, md: 48 }} as="h2" className="fontMoveLeft fontTransition">About</Heading>
-            <Heading as="h1" fontSize={{ base: '46px', md: '64px' }} className="fontMoveRight fontTransition">Kaizen</Heading>
+            <Heading w="100%" fontSize={{ base: '20px', sm: '30px' }} pl={{ base: 12, sm: 24, md: 48 }} as="h2" className="fontMoveLeft fontTransition">About</Heading>
+            <Heading as="h1" fontSize={{ base: '32px', sm: '46px', md: '64px' }} className="fontMoveRight fontTransition">Kaizen</Heading>
           </VStack>
           <VStack
             w={{ base: '100%', md: '85%', lg: '60%' }}

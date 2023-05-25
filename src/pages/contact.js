@@ -31,9 +31,9 @@ export default function Contact() {
       </Head>
       <Header />
       <main>
-        <VStack pt={{ base: 6, md: 0 }} pb={{ base: 12, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }}>
+        <VStack pt={{ base: 6, md: 0 }} pb={{ base: 12, sm: 24, md: 40 }} w="100vw" h="max-content" spacing={{ base: 8, sm: 12, md: 16 }} minWidth="280px">
           <VStack w={{ base: '100%', md: '80%', lg: '50%' }} px={{ base: 10, md: 0 }} spacing={12}>
-            <Heading as="h1" fontSize={{ base: '46px', md: '64px' }}>Contact</Heading>
+            <Heading as="h1" fontSize={{ base: '32px', sm: '46px', md: '64px' }}>Contact</Heading>
             {submitted && (
               <Box w="100%">
                 <Text>
