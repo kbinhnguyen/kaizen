@@ -1,12 +1,12 @@
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  width: 100%;
-  overflow-x: scroll;
-  min-width: 280px;
+    margin: 0;
+    width: 100%;
+    overflow-x: scroll;
+    min-width: 280px;
 }
 
 .fadeIn {
@@ -48,13 +48,13 @@ body {
 
 @keyframes wordsMoveUp {
     0% {
-      transform: translateY(10%);
+        transform: translateY(10%);
     }
     50% {
-      transform: translateY(5%);
+        transform: translateY(5%);
     }
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -73,48 +73,54 @@ body {
 
 @keyframes wordsMoveLeft {
     0% {
-      transform: translateX(5%);
+        transform: translateX(5%);
     }
     50% {
-      transform: translateX(3%);
+        transform: translateX(3%);
     }
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes wordsMoveRight {
     0% {
-      transform: translateX(-5%);
+        transform: translateX(-5%);
     }
     50% {
-      transform: translateX(-3%);
+        transform: translateX(-3%);
     }
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 #stabilized {
     @media(max-width: 320px) {
-      min-height: 500px;
+        min-height: 500px;
     }
 }
 
 #logoSm {
     @media(max-width: 320px) {
-      width: 135px;
+        width: 135px;
     }
 }
 
 #taglineWrapper {
     @media (min-width: 750px) and (orientation: portrait) {
-      padding-top: 35%;
+        padding-top: 35%;
+    }
+}
+
+#btmPanelGrid {
+    @media(max-width: 320px) {
+        grid-template-rows: 400px 600px;
     }
 }
 
 h2 {
     @media(max-width: 320px) {
-      font-size: 26px !important;
+        font-size: 26px !important;
     }
 }

@@ -20,13 +20,14 @@ export default function BottomPanel() {
       h={{ base: 'max-content', md: '100vh' }}
       minHeight={{ base: 'max-content', md: '800px'}}
       maxHeight={{ base: 'max-content', md: '800px' }}
-      templateRows={{ base: '500px 550px', md: '5fr 2fr'}}
-      gap={{ base: 0, md: 14 }}
+      templateRows={{ base: '400px 550px', md: '5fr 2fr'}}
+      gap={{ base: 4, md: 14 }}
       className="eleToWatch"
       opacity={0}
+      id="btmPanelGrid"
     >
       <GridItem w="100%" h="100%" style={style} display="flex" justifyContent="end">
-        <VStack mr={{ base: 10, md: 20}} pt={{ base: 32, sm: 36, lg: 40 }} w={{ base: '65%', lg: '45%' }} spacing={8}>
+        <VStack mr={{ base: 10, md: 20}} pt={{ base: 24, sm: 36, lg: 40 }} w={{ base: '60%', md: '65%', lg: '45%' }} spacing={8}>
             <Heading variant="tagline" as="h2">Permanent Capital allows us to be patient for long-term results.</Heading>
           <Box w="100%">
             <Link variant="learnMore" w="max-content" as={NextLink} href="/about">Learn More</Link>
@@ -41,7 +42,7 @@ export default function BottomPanel() {
           pb={{ base: 8, md: 14 }}
         >
           <GridItem>
-            <VStack spacing={{ base: 2, md: 6 }} w={{ base: '80%', md: '100%', lg: '65%' }}>
+            <VStack spacing={{ base: 2, md: 6 }} w={{ base: '80%', sm: '60%', md: '100%', lg: '65%' }}>
               <Heading as="h2" w="100%" color="#33647E">Business Strategy</Heading>
               <Divider borderColor="#33647E" />
             </VStack>

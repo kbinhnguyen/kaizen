@@ -52,8 +52,8 @@ export default function MidPanel() {
       h={{ lg: '200vh', base: 'max-content'}}
       templateRows={{ base: 'repeat(2, max-content)', lg: 'repeat(2, 1fr)'}}
       templateColumns="1fr"
-      gap={{ lg: 0, base: 6 }}
-      py={{ base: 6, lg: 0 }}
+      gap={{ lg: 0, md: 4, base: 2 }}
+      py={{ md: 6, lg: 0 }}
     >
       <GridItem w="100%" h="100%">
         <Grid
@@ -61,7 +61,7 @@ export default function MidPanel() {
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)'}}
           w="100%" h="100%"
           className="eleToWatch"
-          gap={{ lg: 0, base: 6 }}
+          gap={{ lg: 0, base: 2, md: 4 }}
           opacity={0}
         >
           <GridItem w="100%" pl={{ base: 10, lg: 20 }} pr={{ base: 10, lg: 20 }}>
@@ -102,12 +102,12 @@ export default function MidPanel() {
           templateRows={{base: 'repeat(2, max-content)', lg: '1fr' }}
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)'}}
           w="100%" h="100%"
-          gap={{ lg: 0, base: 6 }}
+          gap={{ lg: 0, base: 2 }}
         >
           <GridItem
             h={{ base: '300px', sm: '400px', lg: '100%' }}
-            ml={{ base: 12, md: 16, lg: 20 }}
-            mr={{ base: 12, md: 16, lg: 0 }}
+            ml={{ base: 12, sm: 16, lg: 20 }}
+            mr={{ base: 12, sm: 16, lg: 0 }}
             my={{ base: 4, lg: 0 }}
             pb={{ base: 0, lg: 6 }}
             display="flex"
