@@ -122,7 +122,7 @@ export default function MidPanel() {
               />
             </Box>
           </GridItem>
-          <GridItem pr={{ base: 10, lg: 20}} pl={{ base: 10, lg: 12 }} pb={{ base: 12, lg: 0 }}>
+          <GridItem id="stabilized" pr={{ base: 10, lg: 20}} pl={{ base: 10, lg: 12 }} pb={{ base: 12, lg: 0 }} minHeight={{ base: '400px', sm: '350px', md: '330px' }}>
             <Stack
               pt={{ base: 4, lg: 36, lg: 48 }}
               spacing={{ base: 4, lg: 12 }}
