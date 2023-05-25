@@ -19,6 +19,7 @@ export default function BottomPanel() {
       w="100vw"
       h={{ base: 'max-content', md: '100vh' }}
       minHeight={{ base: 'max-content', md: '800px'}}
+      maxHeight={{ base: 'max-content', md: '800px' }}
       templateRows={{ base: '500px 550px', md: '5fr 2fr'}}
       gap={{ base: 0, md: 14 }}
       className="eleToWatch"
