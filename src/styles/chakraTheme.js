@@ -132,7 +132,7 @@ const buttonTheme = defineStyleConfig({
       px: 0,
       fontSize: { base: '16px', sm: '18px', md: '20px' },
       _hover: { opacity: 0.3 },
-    }
+    },
   }
 });
 

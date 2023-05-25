@@ -49,19 +49,19 @@ export default function BottomPanel() {
           <GridItem>
             <VStack spacing={3}>
               <Heading as="h4" fontSize={{ base: '24px', md: '28px' }} w="100%" color="#33647E">Investments</Heading>
-              <Text w="100%" fontSize="18px">We seek opportunities to invest in and build business relationships with people who share our values.</Text>
+              <Text w="100%" fontSize={{ base: '16px', sm: '18px' }}>We seek opportunities to invest in and build business relationships with people who share our values.</Text>
             </VStack>
           </GridItem>
           <GridItem>
             <VStack spacing={3}>
               <Heading as="h4" fontSize={{ base: '24px', md: '28px' }} w="100%" color="#33647E">Consulting</Heading>
-              <Text w="100%" fontSize="18px">We always look forward to sharing our knowledge and expertise.</Text>
+              <Text w="100%" fontSize={{ base: '16px', sm: '18px' }}>We always look forward to sharing our knowledge and expertise.</Text>
             </VStack>
           </GridItem>
           <GridItem>
             <VStack spacing={3}>
               <Heading as="h4" fontSize={{ base: '24px', md: '28px' }} w="100%" color="#33647E">Investors</Heading>
-              <Text w="100%" fontSize="18px">We seek investors who want to help others grow and prosper.</Text>
+              <Text w="100%" fontSize={{ base: '16px', sm: '18px' }}>We seek investors who want to help others grow and prosper.</Text>
             </VStack>
           </GridItem>
         </Grid>

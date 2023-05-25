@@ -31,8 +31,17 @@ export default function HeaderNavBar() {
 
   return (
     <>
-      <Box as={Button} px={0} bg="none" w="max-content" _hover={{ bg: 'none' }} onClick={onOpen}>
-        <NextImage src={HamburgerIcon} alt="hamburger-icon" />
+      <Box
+        h="inherit"
+        w="auto"
+        bg="none"
+        as={Button}
+        _hover={{ bg: 'none' }}
+        onClick={onOpen}
+        position="relative"
+        p={0}
+      >
+        <NextImage src={HamburgerIcon} alt="hamburger-icon" style={{ objectFit: 'fill' }} fill={true} position="absolute" />
       </Box>
       <Drawer
         isOpen={isOpen}

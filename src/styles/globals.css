@@ -5,7 +5,8 @@ html {
 body {
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  min-width: 280px;
 }
 
 .fadeIn {
@@ -97,5 +98,23 @@ body {
 #stabilized {
     @media(max-width: 320px) {
       min-height: 500px;
+    }
+}
+
+#logoSm {
+    @media(max-width: 320px) {
+      width: 135px;
+    }
+}
+
+#taglineWrapper {
+    @media (min-width: 750px) and (orientation: portrait) {
+      padding-top: 35%;
+    }
+}
+
+h2 {
+    @media(max-width: 320px) {
+      font-size: 26px !important;
     }
 }

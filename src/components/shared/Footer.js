@@ -41,10 +41,10 @@ export default function Footer() {
           {!isDesktop && (
             <>
               <Grid w="100%" templateColumns="repeat(2, 1fr)" h="max-content" gap={0} pb={4}>
-                <GridItem w="100%" borderRight="1px solid #C2D5ED" pr={4} display="flex" justifyContent="center" alignItems="center">
+                <GridItem w="100%" borderRight="1px solid #C2D5ED" pr="20%" display="flex" justifyContent="center" alignItems="center">
                   <Text w="100%" color="#C2D5ED" align="end">Terms & Conditions</Text>
                 </GridItem>
-                <GridItem borderLeft="1px solid #C2D5ED" w="100%" pl={4} display="flex" justifyContent="center" alignItems="center">
+                <GridItem borderLeft="1px solid #C2D5ED" w="100%" pl="20%" display="flex" justifyContent="center" alignItems="center">
                   <Text w="100%" color="#C2D5ED" align="start">Privacy Policy</Text>
                 </GridItem>
               </Grid>

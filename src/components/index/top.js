@@ -7,7 +7,7 @@ const style = {
   minHeight: 'min(800px, 100vh)',
   maxHeight: 'max(800px, 100vh)',
   width: '100vw',
-  minWidth: '320px',
+  minWidth: '280px',
   backgroundImage: `url(${bg.src})`,
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -18,7 +18,7 @@ export default function TopPanel() {
   return (
     <div style={style} className="fadeIn">
       <Header />
-      <Box w={{ base: '85%', lg: '50%' }} pt={{ base: '10%', md: '5%' }} pl={{ base: 10, md: '10%'}}>
+      <Box id="taglineWrapper" w={{ base: '85%', lg: '50%' }} pt={{ base: '40%', md: '10%' }} pl={{ base: 10, md: '10%'}}>
         <Heading
           as="h2"
           variant="tagline"
