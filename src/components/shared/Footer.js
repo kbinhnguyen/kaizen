@@ -13,7 +13,7 @@ export default function Footer() {
     <Flex
       direction="column"
       w="100vw"
-      h={{ base: 'max-content', lg: '50vh' }}
+      h={{ base: 'max-content', lg: '45vh' }}
       minHeight={{ base: 'max-content', lg: '380px' }}
       bg="#00263E"
       alignItems="center"
@@ -21,6 +21,7 @@ export default function Footer() {
       py={{ base: 8, lg: 12 }}
       px={{ base: 10, lg: 20 }}
       minWidth="280px"
+      id="footer"
     >
       <Box w="200px" pb={{ base: 8, lg: 0 }}>
         <NextImage src={Logo} alt="kaizen-logo" />

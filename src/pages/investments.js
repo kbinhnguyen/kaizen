@@ -50,7 +50,7 @@ export default function Investments() {
               className="expandDown"
             ></Box>
             <Heading
-              fontSize={{ base: '20px', sm: '30px' }}
+              fontSize={{ base: '22px', sm: '30px' }}
               w={{ base: '85%', lg: '80%' }}
               pl={{ base: 6, sm: 10, md: 32 }}
               as="h2"
@@ -58,7 +58,7 @@ export default function Investments() {
             >
               Building Relationships
             </Heading>
-            <Heading as="h1" fontSize={{ base: '32px', sm: '46px', md: '64px' }} className="fontMoveUp fontTransition">Investments</Heading>
+            <Heading as="h1" fontSize={{ base: '36px', sm: '46px', md: '64px' }} className="fontMoveUp fontTransition">Investments</Heading>
             <Text w={{ base: '85%', md: '67%' }} color="#656565" pt={{ base: 2, md: 8 }} pb={8} textAlign="justify">
               Investments come in many forms: people, money, energy and time. While all are important, our first priority is always people. We seek opportunities to invest in and build business relationships with people who share our values and perspectives on free enterprise.
             </Text>

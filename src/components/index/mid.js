@@ -54,6 +54,7 @@ export default function MidPanel() {
       templateColumns="1fr"
       gap={{ lg: 0, md: 4, base: 2 }}
       py={{ md: 6, lg: 0 }}
+      id="midPanel"
     >
       <GridItem w="100%" h="100%">
         <Grid
@@ -67,7 +68,7 @@ export default function MidPanel() {
           <GridItem w="100%" pl={{ base: 10, md: 20 }} pr={{ base: 10, md: 20 }}>
             <Stack
               spacing={{ base: 2, lg: 6 }}
-              pt={{ base: 12, lg: 44 }}
+              pt={{ base: 12, lg: '45%' }}
               direction="column"
             >
               <Heading variant="accented" as="h3" w="100%" fontSize={{ base: '16px', sm: '18px', md: '20px' }}>OUR APPROACH</Heading>
@@ -80,7 +81,7 @@ export default function MidPanel() {
           <GridItem
             h={{ base: '300px', sm: '400px', lg: '100%' }}
             mx={{ base: 12, sm: 16, md: 20 }}
-            // ml={{ base: 12, sm: 16, md: 0 }}
+            ml={{ lg: 0 }}
             my={{ base: 4, lg: 0 }}
             pt={{ base: 0, lg: 6 }}
             display="flex"
@@ -107,7 +108,7 @@ export default function MidPanel() {
           <GridItem
             h={{ base: '300px', sm: '400px', lg: '100%' }}
             mx={{ base: 12, sm: 16, md: 20 }}
-            // mr={{ base: 12, sm: 16, md: 0 }}
+            mr={{ lg: 0 }}
             my={{ base: 4, lg: 0 }}
             pb={{ base: 0, lg: 6 }}
             display="flex"
@@ -131,7 +132,7 @@ export default function MidPanel() {
             minHeight={{ base: '400px', sm: '350px', md: '330px' }}
           >
             <Stack
-              pt={{ base: 4, lg: 36, lg: 48 }}
+              pt={{ base: 4, lg: '45%' }}
               spacing={{ base: 4, lg: 12 }}
               h={{ base: 'max-content', lg: '60%'}}
               direction={{ base: 'column', lg: 'row' }}

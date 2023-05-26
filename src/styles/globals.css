@@ -119,6 +119,18 @@ body {
     }
 }
 
+#footer {
+    @media (min-width: 1200px) and (orientation: portrait) {
+        max-height: 450px;
+    }
+}
+
+#midPanel {
+    @media (min-width: 1200px) and (orientation: portrait) {
+        max-height: min(200vh, 2000px);
+    }
+}
+
 h2 {
     @media(max-width: 320px) {
         font-size: 26px !important;

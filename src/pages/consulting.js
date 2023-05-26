@@ -51,11 +51,11 @@ export default function Consulting() {
               pl={{ base: 8, sm: 14, md: 16 }}
               as="h2"
               className="fontMoveUp fontTransition"
-              fontSize={{ base: '20px', sm: '30px' }}
+              fontSize={{ base: '22px', sm: '30px' }}
             >
               Knowledge & Expertise
             </Heading>
-            <Heading as="h1" fontSize={{ base: '32px', sm: '46px', md: '64px' }} className="fontMoveUp fontTransition">Consulting</Heading>
+            <Heading as="h1" fontSize={{ base: '36px', sm: '46px', md: '64px' }} className="fontMoveUp fontTransition">Consulting</Heading>
             <Text w={{ base: '85%', md: '80%' }}  color="#656565" pt={{ base: 2, md: 8 }} textAlign="justify">
               Investing, owning and managing our own companies have put us in an excellent position to add value to your company. We always look forward to sharing our knowledge and expertise.
             </Text>
